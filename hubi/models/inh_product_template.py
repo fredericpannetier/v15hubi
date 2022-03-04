@@ -245,13 +245,15 @@ class HubiInheritedProductCategory(models.Model):
         
         #This function opens a window to create  products from the category
         try:
-            create_product_form_id = ir_model_data.get_object_reference('hubi', 'create_product_from_category_form_view')[1]
+            create_product_form_id = ir_model_data.check_object_reference('hubi', 'create_product_from_category_form_view', True)[1]
+            #check_object_reference + True au lieu de get_object_reference
             
         except ValueError:
             create_product_form_id = False
             
         try:
-            search_view_id = ir_model_data.get_object_reference('hubi', 'create_product_from_category_search')[1]
+            search_view_id = ir_model_data.check_object_reference('hubi', 'create_product_from_category_search', True)[1]
+            #check_object_reference + True au lieu de get_object_reference
             
         except ValueError:
             search_view_id = False
