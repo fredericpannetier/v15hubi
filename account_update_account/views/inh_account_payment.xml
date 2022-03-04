@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   
+    <record id="view_account_payment_miadi_tree" model="ir.ui.view">
+        <field name="name">account.payment.miadi.tree</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="destination_account_id" />
+                <field name="is_reconciled" />
+                <!-->                  
+                <field name="reconciled_invoices_count"  />
+                <field name="reconciled_bills_count" />
+                <field name="reconciled_statements_count"  />
+                -->
+            </field>
+        </field>
+    </record>
+ 
+          
+
+    <record id="view_payment_miadi_form" model="ir.ui.view">
+        <field name="name">payment.miadi.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
+        <field name="arch" type="xml">
+        
+        <xpath expr="//button[@name='action_draft']" position="replace"/>
+        <xpath expr="//button[@name='action_post']" position="after">
+            <button name="action_draft" string="Reset To Draft" type="object" class="btn btn-secondary" 
+                attrs="{'invisible': [('state', 'not in', ('posted', 'cancel'))]}" 
+                groups="account.group_account_manager"/>
+                        
+        </xpath>
+            
+        </field>
+    </record>
+  
+    <record id="view_payment_batch_miadi_form" model="ir.ui.view">
+        <field name="name">payment.batch.miadi.form</field>
+        <field name="model">account.batch.payment</field>
+        <field name="inherit_id" ref="account_batch_payment.view_batch_payment_form" />
+        <field name="arch" type="xml">
+        
+        <xpath expr="//page[@name='batch_content']/field[@name='payment_ids']/form/group/group/field[@name='partner_id']" position="after">
+            <field name="destination_account_id" />
+        </xpath>                
+        
+            
+        </field>
+    </record>
+    
+    
+</odoo>
