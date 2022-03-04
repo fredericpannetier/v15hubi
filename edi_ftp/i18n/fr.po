@@ -1,0 +1,441 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* edi_ftp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-27 11:51+0000\n"
+"PO-Revision-Date: 2021-09-20 16:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid ""
+"<span class=\"o_form_label\">Default Values</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Valeurs par défaut</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs ci-dessous sont spécifiques à la société.\" aria-label=\"Les valeurs ci-dessous sont spécifiques à la société.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_address model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Address FTP"
+msgstr "Adresse FTP"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_display_dialog_form model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Cancel"
+msgstr "Annulation"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__code_message
+msgid "Code Message"
+msgstr "Code Message"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de Configuration"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_miadi_config_parameter
+msgid "Configuration Parameter"
+msgstr "Paramètres de Configuration"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_display_dialog_form
+msgid "Confirm Dialog"
+msgstr "Message de confirmation"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_display_dialog_form
+msgid "Copy"
+msgstr "Copie"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__create_uid model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__create_date model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_edi_customer
+msgid "Customer"
+msgstr "Client"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Default values for EDI_FTP"
+msgstr "Valeurs par défaut pour EDI_FTP"
+
+#. module: edi_ftp
+#: model:ir.actions.act_window,name:edi_ftp.action_wiz_dialog
+msgid "Display Dialog"
+msgstr "Affichage de la boîte de dialogue"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_account_move__display_name model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__display_name model:ir.model.fields,field_description:edi_ftp.field_res_partner__display_name
+#: model:ir.model.fields,field_description:edi_ftp.field_sale_order__display_name model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__display_name model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__display_name
+msgid "Display Name"
+msgstr "Nom Affiché"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_edi model:ir.ui.menu,name:edi_ftp.menu_edi_ftp model_terms:ir.ui.view,arch_db:edi_ftp.view_partner_customer_edi model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "EDI"
+msgstr "EDI"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "EDI FTP"
+msgstr "EDI FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__edi_data
+msgid "EDI File"
+msgstr "Fichier EDI"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_edi_import_sale
+msgid "EDI Import Sale"
+msgstr "EDI Import Commandes"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_partner__di_edi_invoice model:ir.model.fields,field_description:edi_ftp.field_res_users__di_edi_invoice model:ir.ui.menu,name:edi_ftp.menu_edi_invoice
+#: model_terms:ir.ui.view,arch_db:edi_ftp.view_partner_customer_edi
+msgid "EDI Invoice"
+msgstr "EDI Facture"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_partner__di_edi_invoice_prod model:ir.model.fields,field_description:edi_ftp.field_res_users__di_edi_invoice_prod
+msgid "EDI Invoice Production"
+msgstr "EDI Facture Production"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_edi_sale
+msgid "EDI Sale"
+msgstr "EDI Commande"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_partner__di_edi_transport_recipient model:ir.model.fields,field_description:edi_ftp.field_res_users__di_edi_transport_recipient
+msgid "EDI Transport Recipient"
+msgstr "EDI Destinataire Transport"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "EDI_FTP"
+msgstr "EDI_FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__date_end
+msgid "End Date"
+msgstr "Date Fin"
+
+#. module: edi_ftp
+#: model:ir.model.fields,help:edi_ftp.field_wiz_edi_ftp__date_end
+msgid "Ending date for the the creation of invoices"
+msgstr "Date de fin pour la création des factures"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid ""
+"Export file invoice by FTP : Error : \"%s\". \n"
+"Do you want to export the EDI file on your local disk ?"
+msgstr ""
+"Export du fichier des factures par FTP: Error: \"%s\". \n"
+"Voulez-vous exporter le fichier EDI sur votre disque local ?"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid ""
+"Export file invoice by FTP : OK.\n"
+"Do you want to export the EDI file on your local disk ?"
+msgstr ""
+"Export du fichier des factures par FTP: OK. \n"
+"Voulez-vous exporter le fichier EDI sur votre disque local ?"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "Export file sale by FTP : Error : \"%s\". \n"
+msgstr "Export du fichier des commandes par FTP: Error: \"%s\". \n"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid ""
+"Export file sale by FTP : Error : \"%s\". \n"
+"Do you want to export the EDI file on your local disk ?"
+msgstr ""
+"Export du fichier des commandes par FTP: Error: \"%s\". \n"
+"Voulez-vous exporter le fichier EDI sur votre disque local ?"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid ""
+"Export file sale by FTP : OK.\n"
+"Do you want to export the EDI file on your local disk ?"
+msgstr ""
+"Export du fichier des commandes par FTP: OK. \n"
+"Voulez-vous exporter le fichier EDI sur votre disque local ?"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_directory model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "FTP Directory"
+msgstr "Répertoire FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_directory_import_sale model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "FTP Directory for Import Sale"
+msgstr "Répertoire FTP pour l'import des commandes"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_sale_file
+msgid "FTP Sale File"
+msgstr "Fichier FTP des commandes"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__invoice_file_edi model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__invoice_file_edi
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__sale_file_edi
+msgid "File For Invoice EDI"
+msgstr "Fichier pour Facture EDI"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__sale_file_edi
+msgid "File For Sale EDI"
+msgstr "Fichier pour Commande EDI"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__filename_edi
+msgid "File name EDI"
+msgstr "Nom du fichier EDI"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__filename
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_partner__di_code_ean model:ir.model.fields,field_description:edi_ftp.field_res_users__di_code_ean
+msgid "GLN Code"
+msgstr "Code GLN"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_account_move__id model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__id model:ir.model.fields,field_description:edi_ftp.field_res_partner__id
+#: model:ir.model.fields,field_description:edi_ftp.field_sale_order__id model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__id model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__id
+msgid "ID"
+msgstr "ID"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__id_edi
+msgid "ID EDI"
+msgstr "ID EDI"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "Import \"%s\" file sale by FTP : OK.\n"
+msgstr "Import \"%s\" fichier des commandes par FTP : OK.\n"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Import Sale EDI"
+msgstr "Import Commandes EDI"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Import Sale File from FTP"
+msgstr "Import du fichier des commandes par FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__confirm_message
+msgid "Information"
+msgstr "Information"
+
+#. module: edi_ftp
+#: model:ir.actions.act_window,name:edi_ftp.action_miadi_invoice_edi model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Invoice EDI"
+msgstr "Facture EDI"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Invoice File EDI"
+msgstr "Fichier de Facture EDI"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_account_move____last_update model:ir.model.fields,field_description:edi_ftp.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:edi_ftp.field_res_partner____last_update model:ir.model.fields,field_description:edi_ftp.field_sale_order____last_update model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog____last_update
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__write_uid model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__write_uid
+msgid "Last Updated by"
+msgstr "Dernière MAJ par"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_dialog__write_date model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__write_date
+msgid "Last Updated on"
+msgstr "Dernière MAJ le"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__local_directory_import_sale model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Local Directory for Import Sale"
+msgstr "Répertoire Local pour l'import des commandes"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_login model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Login FTP"
+msgstr "Connexion FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_name model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Name FTP"
+msgstr "Nom FTP"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "No file sale to import\n"
+msgstr "Aucun fichier de vente à importer \n"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "No selected invoice"
+msgstr "Aucune facture sélectionnée"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "No selected sale"
+msgstr "Aucune commande sélectionnée"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_password model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Password FTP"
+msgstr "Mot de passe FTP"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Periods"
+msgstr "Périodes"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_res_config_settings__ftp_port model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "Port FTP"
+msgstr "Port FTP"
+
+#. module: edi_ftp
+#: model:ir.ui.menu,name:edi_ftp.menu_edi_quotations
+msgid "Quotations"
+msgstr "Devis"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__re_transfer
+msgid "Re-Transfer"
+msgstr "Re-Transfer"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Retransfer"
+msgstr "Retransfert"
+
+#. module: edi_ftp
+#: model:ir.actions.act_window,name:edi_ftp.action_miadi_import_sale_edi model:ir.actions.act_window,name:edi_ftp.action_miadi_sale_edi model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Sale EDI"
+msgstr "Commande EDI"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "Sale File EDI"
+msgstr "Fichier de Commande EDI"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_sale_order
+msgid "Sales Order"
+msgstr "Commande client"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__edi_select
+msgid "Select EDI"
+msgstr "Sélectionnez EDI"
+
+#. module: edi_ftp
+#: model:ir.actions.act_window,name:edi_ftp.edi_action_config_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_wiz_edi_ftp__date_start
+msgid "Start Date"
+msgstr "Date Début"
+
+#. module: edi_ftp
+#: model:ir.model.fields,help:edi_ftp.field_wiz_edi_ftp__date_start
+msgid "Starting date for the creation of invoices"
+msgstr "Date de début de création des factures"
+
+#. module: edi_ftp
+#: code:addons/edi_ftp/models/wiz_transfer_edi.py:0
+#, python-format
+msgid "The partner's bar code  '%s' does not exist "
+msgstr "Le code-barres du partenaire '%s' n'existe pas "
+
+#. module: edi_ftp
+#: model:ir.model.fields,help:edi_ftp.field_res_config_settings__invoice_file_edi model:ir.model.fields,help:edi_ftp.field_res_config_settings__sale_file_edi model:ir.model.fields,help:edi_ftp.field_wiz_edi_ftp__invoice_file_edi
+#: model:ir.model.fields,help:edi_ftp.field_wiz_edi_ftp__sale_file_edi
+msgid "The string [datetime] will  be replaced  by the current datetime. It is useful if you want to keep an history of your files and not delete the last one when you make a new one."
+msgstr "La chaîne [datetime] sera remplacée par la date actuelle. C'est utile si vous souhaitez conserver un historique de vos fichiers et ne pas supprimer le dernier lorsque vous en créez un nouveau."
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.res_config_settings_edi_form
+msgid "These values are default values for EDI_FTP"
+msgstr "Ces valeurs sont des valeurs par défaut pour EDI_FTP"
+
+#. module: edi_ftp
+#: model:ir.model.fields,field_description:edi_ftp.field_account_bank_statement_line__di_transfer_edi model:ir.model.fields,field_description:edi_ftp.field_account_move__di_transfer_edi
+#: model:ir.model.fields,field_description:edi_ftp.field_account_payment__di_transfer_edi model:ir.model.fields,field_description:edi_ftp.field_sale_order__di_transfer_edi
+msgid "Transfer EDI"
+msgstr "Transfert EDI"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_wiz_edi_ftp
+msgid "Wizard EDI FTP"
+msgstr "Assistant EDI FTP"
+
+#. module: edi_ftp
+#: model:ir.model,name:edi_ftp.model_wiz_dialog
+msgid "Wizard for dialog"
+msgstr "Assistant pour la boîte de dialogue"
+
+#. module: edi_ftp
+#: model_terms:ir.ui.view,arch_db:edi_ftp.wiz_ftp_edi
+msgid "edi_select"
+msgstr "edi_select"

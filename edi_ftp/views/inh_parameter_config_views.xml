@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="res_config_settings_edi_form" model="ir.ui.view">
+    <field name="name">Config Settings for EDI</field>
+    <field name="model">res.config.settings</field>
+    
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+            <div class="app_settings_block" data-string="EDI_FTP" string="EDI_FTP" data-key="edi_ftp" groups="account.group_account_invoice">
+            <t groups="account.group_account_invoice">
+                <h2>EDI_FTP</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="These values are default values for EDI_FTP">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Default Values</span>
+                            <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+                            <div class="text-muted">
+                                Default values for EDI_FTP
+                            </div>
+                          
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Name FTP" for="ftp_name" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_name" />
+                                </div>
+  
+                                <div class="row mt16">
+                                    <label string="Address FTP" for="ftp_address" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_address" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Port FTP" for="ftp_port" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_port" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Login FTP" for="ftp_login" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_login" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Password FTP" for="ftp_password" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_password" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="FTP Directory" for="ftp_directory" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_directory" />
+                                </div>
+                            </div>
+                           
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Invoice File EDI" for="invoice_file_edi" class="col-lg-5 o_light_label"/>
+                                    <field name="invoice_file_edi" />
+                                </div>
+                                <div class="row mt16" name="sale_edi">
+                                    <label string="Sale File EDI" for="sale_file_edi" class="col-lg-5 o_light_label"/>
+                                    <field name="sale_file_edi" />
+                                </div>
+                            
+                            </div>    
+
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="FTP Directory for Import Sale" for="ftp_directory_import_sale" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_directory_import_sale" />
+                                </div>
+                                <div class="row mt16" name="sale_edi">
+                                    <label string="Local Directory for Import Sale" for="local_directory_import_sale" class="col-lg-5 o_light_label"/>
+                                    <field name="local_directory_import_sale" />
+                                </div>
+                                <div class="row mt16" name="sale_edi">
+                                    <label string="Import Sale File from FTP" for="ftp_sale_file" class="col-lg-5 o_light_label"/>
+                                    <field name="ftp_sale_file" />
+                                </div>
+                            </div>    
+
+                        </div>
+                    </div>
+                </div>
+            </t>
+            </div>
+        </xpath>
+    </field>
+</record> 
+  
+    <record id="edi_action_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_edi_form" />
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'edi_ftp'}</field>
+    </record>  
+   
+ 
+</odoo>

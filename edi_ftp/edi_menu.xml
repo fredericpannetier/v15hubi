@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="menu_edi_ftp" name="EDI" sequence="200" web_icon="edi_ftp,static/description/icone_edi.png"/>
+        <menuitem id="menu_edi_customer" name="Customer" sequence="20" parent="menu_edi_ftp" action="account.res_partner_action_customer"  />
+        <menuitem id="menu_edi_quotations" name="Quotations" sequence="30" parent="menu_edi_ftp" action="sale.action_quotations"  />
+        <menuitem id="menu_edi" name="EDI" sequence="40" parent="menu_edi_ftp"  />
+        <!-->
+            <menuitem id="menu_edi_sale" name="EDI Sale" sequence="10" parent="menu_edi" action="edi_ftp.action_miadi_edi_sale"  />
+        -->    
+            <menuitem id="menu_edi_invoice" name="EDI Invoice" sequence="20" parent="menu_edi" action="edi_ftp.action_miadi_invoice_edi"  />
+            <menuitem id="menu_edi_sale" name="EDI Sale" sequence="30" parent="menu_edi" action="edi_ftp.action_miadi_sale_edi"  />
+        <!-->            
+            <menuitem id="menu_edi_import_sale" name="EDI Import Sale" sequence="40" parent="menu_edi" action="edi_ftp.action_miadi_import_sale_edi"  />
+        -->
+        <menuitem id="menu_miadi_config_parameter" name="Configuration Parameter" sequence="150" parent="menu_edi_ftp"  action="edi_action_config_settings" />
+
+
+</odoo>

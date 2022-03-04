@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu EDI FTP -->
+    <menuitem id="menu_hubi_edi_ftp" name="EDI FTP" sequence="85" parent="hubi_menu.menu_hubi" />
+       
+        <menuitem id="menu_hubi_edi_invoice" name="EDI Invoice" sequence="20" parent="menu_hubi_edi_ftp" action="edi_ftp.action_miadi_invoice_edi"  />
+        <menuitem id="menu_hubi_edi_sale" name="EDI Sale" sequence="30" parent="menu_hubi_edi_ftp" action="edi_ftp.action_miadi_sale_edi"  />
+        <!-->
+        <menuitem id="menu_hubi_import_sale" name="EDI Import Sale" sequence="40" parent="menu_hubi_edi_ftp" action="edi_ftp.action_miadi_import_sale_edi"  />
+        -->
+        <!-->
+        <menuitem id="menu_hubi_edi_config_parameter" name="Configuration Parameter" sequence="90" parent="menu_hubi_edi_ftp"  action="edi_ftp.edi_action_config_settings" />
+        -->
+                
+</odoo>
