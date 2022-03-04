@@ -122,7 +122,7 @@
                                     
                                 <td class="text-right">
                                     <span t-field="l.quantity"/>
-                                    <!--<span t-field="l.uom_id"  groups="product.group_uom"/>-->
+                                    <!--<span t-field="l.uom_id"  groups="uom.group_uom"/>-->
                                     <t t-if="l.product_id.categ_id.shell">
                                             <t t-set="total_qty" t-value="total_qty + l.quantity" />
                                         </t> 

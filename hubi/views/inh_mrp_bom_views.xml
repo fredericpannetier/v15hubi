@@ -35,7 +35,7 @@
                     <field name="code"/>
                     <field name="product_id" groups="product.group_product_variant"/>
                     <field name="product_qty"/>
-                    <field name="product_uom_id" groups="product.group_uom"/>
+                    <field name="product_uom_id" groups="uom.group_uom"/>
                     <field name="display_name"/>
                 </tree>
             </field>

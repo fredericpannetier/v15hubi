@@ -146,7 +146,7 @@
                     <field name="list_price"/>
                     <field name="standard_price"/>
                     <field name="weight"/>
-                    <field name="uom_id" options="{'no_open': True, 'no_create': True}" groups="product.group_uom"/>
+                    <field name="uom_id" options="{'no_open': True, 'no_create': True}" groups="uom.group_uom"/>
                     <field name="di_quantity"/>
                     <field name="type"/>
                     <field name="active" invisible="1"/>
