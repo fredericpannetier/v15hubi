@@ -25,4 +25,5 @@
     ],
     'test': [],
     'application': True,
+    'license': 'OPL-1',
 }
