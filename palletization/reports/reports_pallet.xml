@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="paperformat_A4_etiquette" model="report.paperformat">
+        <field name="name">European A4</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">10</field>
+        <field name="margin_right">10</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+
+    
+    <!-- <report id="action_report_pallet" 
+            model="sale.order"  
+            string="Etiquette Pallet Std" 
+            report_type="qweb-pdf" 
+            name="palletization.report_etiquette_pallet_std" 
+            file="palletization.report_etiquette_pallet_std"
+            paperformat="paperformat_A4_etiquette" 
+            attachment_use="False">
+    </report> -->
+    
+  
+    
+    <record id="action_report_pallet" model="ir.actions.report">
+        <field name="name">Pallet label</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">palletization.report_etiquette_pallet_std</field>
+        <field name="report_file">palletization.report_etiquette_pallet_std</field>
+        <field name="paperformat_id" ref="palletization.paperformat_A4_etiquette"/>
+        <field name="binding_type">report</field>     
+        <field name="binding_model_id" ref="model_sale_order"/>                                   
+    </record>
+  
+    <template id="report_etiquette_pallet_std">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="order">
+            <t t-foreach="order.palletization_print_ids" t-as="pallet">    
+                
+                 <t t-call="web.internal_layout">    
+    
+                    <div class="page">
+                        <div style="width: 100%; display: inline-table; height:100mm;">
+                        <table class="table table-sm table-bordered" style="border-bottom: 0px solid white !important;width: 100%;">
+                            <tr style="border-bottom: 0px">
+                                <th style="text-align: left;"><strong>Expéditeur </strong></th>
+                                <th style="text-align: left;"><strong>Destinataire </strong></th>
+                            </tr>
+                            <tr style="border-bottom: 0px; border-top: 0px">
+                                <td > <span t-field="pallet.etab_exped_id.name" /> </td> 
+                                <td > <span t-field="pallet.partner_id.name" /> </td>
+                            </tr>
+                            <tr style="border-bottom: 0px; border-top: 0px">
+                                <td > <span t-field="pallet.etab_exped_id.street" /> </td> 
+                                <td > <span t-field="pallet.partner_id.street" /> </td>
+                            </tr>
+                            <tr style="border-bottom: 0px; border-top: 0px">
+                                <td > <span t-field="pallet.etab_exped_id.street2" /> </td> 
+                                <td > <span t-field="pallet.partner_id.street2" /> </td>
+                            </tr>
+                            <tr style="border-bottom: 0px; border-top: 0px">
+                                <td > <span t-field="pallet.etab_exped_id.zip" />&amp;bull;<span t-field="pallet.etab_exped_id.city" /> </td> 
+                                <td > <span t-field="pallet.partner_id.zip" />&amp;bull;<span t-field="pallet.partner_id.city" /> </td>
+                            </tr>
+                            <tr style="border-top: 0px">
+                                <td > <span t-field="pallet.etab_exped_id.email" /> </td> 
+                                <td > <span t-field="pallet.partner_id.email" /> </td>
+                            </tr>
+                        </table>
+                        
+                        <table class="table table-sm table-bordered" style="border-bottom: 0px solid white !important;width: 100%;">
+                            <tr>
+                                <th style="text-align: left;"><strong>Transporteur </strong></th>
+                                <th style="text-align: left;"><strong>Date Expédition </strong></th>
+                            </tr>
+                            <tr>
+                                <td> <span t-field="pallet.carrier_id.name" /> </td> 
+                                <td> <span t-field="pallet.commitment_date" /> </td>
+                            </tr>
+                        </table>
+                        
+                        <table class="table table-sm" style="border-bottom: 0px solid white !important;width: 100%;">
+                            <tr>
+                                <th style="text-align: left;"><strong>Palette    : </strong> 
+                                    <strong t-field="pallet.type_pallet" /> 
+                                    <strong>No    : </strong> 
+                                    <strong t-field="pallet.no_pallet" />
+                                </th>
+                            </tr>
+                            <!-->
+                            <tr>
+                                <td> <strong t-field="pallet.type_pallet" /> </td> 
+                            </tr>
+                            <tr>
+                                <strong>No </strong> 
+                                <td> <strong t-field="pallet.no_pallet" /> </td>
+                            </tr>
+                            -->
+                            
+                        </table>
+
+                        <table class="table table-sm" style="border:none;"  >   <!--style="border-bottom: 0px solid white !important;width: 100%;"-->
+                            <td>
+                                <strong>Poids total    : </strong> 
+                                <strong t-field="pallet.weight_total" /> 
+                            </td>
+                            <td>
+                                <strong>Nb colis total    : </strong> 
+                                <strong t-field="pallet.package_total" /> 
+                                                           </td>
+                            <td>
+                                <strong>Utilisation Palette    : </strong> 
+                                <strong t-field="pallet.use_pal_total" /> 
+                                 
+                            </td>
+                        </table>
+                        <table class="table table-sm" style="border-bottom: 0px solid white !important;width: 100%;">
+                            <tr>
+                                <td class="text-center align-middle" >
+                                    <t t-if="pallet.no_pallet">
+                                        <img alt="Barcode" t-if="len(pallet.no_pallet) == 13" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', quote_plus(pallet.no_pallet or ''), 600, 150)" style="width:700px;height:100px"/>
+                                        <img alt="Barcode" t-elif="len(pallet.no_pallet) == 8" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN8', quote_plus(pallet.no_pallet or ''), 600, 150)" style="width:700px;height:100px"/>
+                                        <img alt="Barcode" t-else="" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(pallet.no_pallet or ''), 600, 150)" style="width:700px;height:100px"/>
+                                        <span t-field="pallet.no_pallet"/>
+                                    </t>
+                                    <t t-else=""><span class="text-muted">No barcode available</span></t>
+                                </td>
+                            </tr>
+
+
+                        </table>
+                        </div>
+                        
+                        <div style="width: 100%; display: inline-table; ">  <!--> height:110mm;-->
+                        
+                        
+                        <t t-if="pallet.line_pallet_ids">
+                            <table class="table table-sm table-bordered">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Lot</th>
+                                    <th>DLC</th>
+                                    <th>Package</th>
+                                    
+                                    <th>Weight</th>
+                                    <th>Quantity</th>
+                                    <th>Utilis.</th>
+                                </tr>
+                                <t t-foreach="pallet.line_pallet_ids" t-as="line">
+                                    <tr>
+                                        <td> <span t-field="line.description_item" /></td>
+                                        <td> <span t-field="line.batch_number" /></td>
+                                        <td> <span t-field="line.dlc_date" /></td>
+                                        <td> <span t-field="line.package" /></td>
+                                        <td> <span t-field="line.weight" /></td>
+                                        <td> <span t-field="line.quantity" /></td>
+                                        <td> <span t-field="line.use_pal" /></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </t>    
+                            
+                        </div>
+                        
+            
+                    </div>
+                  
+                </t>
+            </t>
+            </t>
+        </t>
+    </template>   
+
+ 
+    <template id="report_etiquette_pallet_std_old">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="pallet">
+                
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        
+                        <li> Date Expédition : <span t-field="pallet.commitment_date" /></li>
+                        <li> Expéditeur      : <span t-field="pallet.etab_exped_id.name" /></li>
+                        <li> Transporteur    : <span t-field="pallet.carrier_id.name" /></li>
+                        <li> Destinataire    : <span t-field="pallet.partner_id.name" /></li>
+                        <li>                 : <span t-field="pallet.partner_id.street" /></li>
+                        <li>                 : <span t-field="pallet.partner_id.street2" /></li>
+                        <li>                 : <span t-field="pallet.partner_id.zip" />&amp;bull;<span t-field="pallet.partner_id.city" /></li>
+                        <li> Palette         : <span t-field="pallet.pallet_no" /></li>
+                        
+                        <t t-if="pallet.line_pallet_ids">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Package</th>
+                                    <th>Lot</th>
+                                    <th>DLC</th>
+                                </tr>
+                                <t t-foreach="pallet.line_pallet_ids" t-as="line">
+                                    <tr>
+                                        <td> <span t-field="line.product_id.name" /></td>
+                                        <td> <span t-field="line.package" /></td>
+                                        <td> <span t-field="line.lot_id" /></td>
+                                        <td> <span t-field="line.dlc_date" /></td>
+                                    </tr>
+                                </t>
+                            </table>
+                        </t>    
+                            
+                        
+                        
+            
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>   
+
+</odoo>

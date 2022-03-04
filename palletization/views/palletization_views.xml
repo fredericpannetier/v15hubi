@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="di_palletization_sale_order_form_view" model="ir.ui.view">
+        <field name="name">di.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+          
+            <xpath expr="//form/header/field[@name='state']" position="before">
+                <button name="action_palletization" type="object" string="Palletization"  
+                class="oe_button oe_form_button oe_highlight" 
+                attrs="{'invisible': [('state', 'in', ['draft', 'sent', 'cancel'])]}"/> 
+            </xpath>
+
+            <xpath expr="//group[@name='sales_person']" position="after">
+                <group name="palettization_row" string="Palletization">
+                    <field name="di_pallet_number"/>
+                </group>
+            </xpath>  
+
+
+        </field>
+    </record>
+ 
+<!--> 
+    <record id="di_sale_pallet_form_inherited" model="ir.ui.view">
+        <field name="name">sale.pallet.form.inherited</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field eval="100" name="priority"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sales_person']" position="after">
+                <group name="palettization_row" string="Palletization">
+                    <field name="di_pallet_number"/>
+                </group>
+            </xpath>  
+        </field>
+    </record>
+-->
+
+
+    <record id="di_palletization_form" model="ir.ui.view">
+        <field name="name">di.palletization.form</field>
+        <field name="model">sale.order</field>
+        <field name="priority" eval="17"/>
+        <field name="arch" type="xml">
+            <form string="Palletization">
+                <header>
+                    <button string="Create Pallet" type="object" name="create_pallet"  class="oe_button oe_form_button oe_highlight" />
+                    <button string="Print Etiquette Pallet" type="object" name="print_etiquet_pallet"  class="oe_button oe_form_button oe_highlight" />
+                </header>
+                <sheet>
+                
+                    <div class="oe_title" name="palletization_0001">
+                        <h1>
+                            <label for="name" string="Palletization for the Order : "/>
+                            <field name="name"  readonly="1"/>
+                        </h1>
+                        <field name="state" invisible="1"/>
+                        <field name="pricelist_id" invisible="1"/>
+                        <field name="company_id" invisible="1"/>
+                    </div>
+                    
+                    <group name="palletization_001">
+                        <group name="palletization_002">
+                            <field name="partner_id" options="{'no_create': True, 'no_open': True}" readonly="1"/>
+                            <!-- <field name="order_line" invisible="1" />                                 -->
+                            <field name="partner_shipping_id" options="{'no_create': True, 'no_open': True}" groups="sale.group_delivery_invoice_address" readonly="1"/>
+                        </group>
+                        <group name="palletization_003">
+                            <field name="date_order" readonly="1"/>
+                            <field name="carrier_id" options="{'no_create': True, 'no_open': True}" readonly="1" />
+                            <div class="o_row">
+                                <!-- <strong> <label for="di_type_pallet" string="Pallet Type "/> 
+                                <field name="di_type_pallet" /></strong> -->
+                                <button
+                                string=" Update Qty"
+                                type="object"
+                                name="create_pallet_sale"
+                                class="btn-link mb4 fa fa-lightbulb-o"
+                                />
+                            </div>
+                        </group>
+                    </group> 
+                    
+                    <notebook>
+                        <page string="Order Lines">
+                            <field name="palletization_ids" mode="tree"  > 
+                        
+                                <form string="Sales Order Lines" create="false" >
+                                    <group>
+                                        <field name="product_id" string="Product" options="{'no_create': True, 'no_open': True}" readonly="1" />
+                                        <field name="uom_qty" string="Ordered Qty" readonly="1" />
+                                        
+                                    </group>    
+                                </form>  
+                                <tree string="Sales Order Lines" editable="bottom" create="false" delete="false">
+                                    <field name="order_id" invisible="1" />                                    
+                                    <field name="product_id" readonly="1" />
+                                    <field name="uom_qty" readonly="1" />
+                                    <field name="paltyp_id" />
+                                    <field name="default_pallet_qty" string="Max Quantity" readonly="1" force_save="1" />
+                                    <field name="pallet_qty" readonly="1" />
+                                    <field name="batch_number" readonly="1"/>
+                                    <field name="residual_qty" readonly="1" />
+                                    
+                                    <button string="New_Pallet" type="object" name="new_pallet" icon="fa-th-list"/>
+                                    
+                                    
+                                    <field name="input_qty" />
+                                    <field name="input_pallet_id" options="{'no_create': True, 'no_open': True}" domain="[('order_id', '=',order_id),('paltyp_id','=',paltyp_id)]"  />
+                                    <button string="Complete_Pallet" type="object" name="complete_pallet" icon="fa-cubes"/>
+                                    <field name="order_id" invisible="1" />
+                                    
+                                    <button string="Delete_Line" type="object" name="delete_all_pallet" icon="fa-minus"/>
+                                    
+                                </tree>                       
+                            </field>
+                  
+                            <field name="palletization_line_ids" mode="tree" readonly="1" >   
+                                <form string="Palletization Lines" create="false" >
+                                    <group name="palletization_003">
+                                        <field name="pallet_no" readonly="1" />
+                                        <field name="product_id" readonly="1"/>
+                                        <field name="batch_number" readonly="1"/>
+                                        <field name="date_limit" readonly="1"/>
+                                        <field name="weight" readonly="1"/>
+                                        <field name="quantity"  />
+
+                                    </group>    
+                                </form>  
+                                <tree string="Palletization Lines" editable="bottom" create="false">
+                                    <field name="pallet_no" readonly="1"/>
+                                    <field name="paltyp_id" readonly="1"/>
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="batch_number" readonly="1"/>
+                                    <field name="date_limit" readonly="1"/>
+                                    <field name="weight" readonly="1"/>
+                                    <field name="quantity" readonly="1" />
+                                    <field name="palletization_id" invisible="1"/>
+                                    <button string="Delete_Pallet" type="object" name="delete_pallet" icon="fa-minus"/>
+                                </tree>                       
+                            </field>
+                    
+                        </page>
+                    </notebook>
+          
+                </sheet>               
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_di_palletization" model="ir.actions.act_window">
+        <field name="name">palletization</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="di_palletization_form"/>
+    </record>
+    
+ 
+  
+</odoo>

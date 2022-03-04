@@ -1,0 +1,760 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* palletization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "&amp;bull;"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid ""
+"<span class=\"o_form_label\">Default Values</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<span class=\"text-muted\">No barcode available</span>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Date Expédition </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Destinataire </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Expéditeur </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Nb colis total    : </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>No    : </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Palette    : </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Poids total    : </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Transporteur </strong>"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "<strong>Utilisation Palette    : </strong>"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/type_pallet.py:0
+#, python-format
+msgid "Already existing combination"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "Barcode"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__batch_number
+msgid "Batch Number"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__batch_number
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__batch_number
+msgid "Batch number"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_company__di_cnuf
+#: model:ir.model.fields,field_description:palletization.field_res_partner__di_cnuf
+#: model:ir.model.fields,field_description:palletization.field_res_users__di_cnuf
+msgid "CNUF"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__carrier_id
+msgid "Carrier"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Characteristic"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__code_barre
+msgid "Code barre"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/type_pallet.py:0
+#, python-format
+msgid "Code is already used"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__commitment_date
+msgid "Commitment Date"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__company_id
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__company_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__company_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__company_id
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__company_id
+msgid "Company"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__input_pallet_id
+msgid "Complete No Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__input_qty
+msgid "Complete Quantity"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Complete_Pallet"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Create Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__create_uid
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__create_uid
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__create_uid
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__create_uid
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__create_uid
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__create_date
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__create_date
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__create_date
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__create_date
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__create_date
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "DLC"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__dlc_date
+msgid "DLC Date"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Date Expédition :"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__date_limit
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__date_limit
+msgid "Date limit"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__default_pallet_qty
+msgid "Default Quantity on the Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_default_pallet_qty_1
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_default_pallet_qty_1
+msgid "Default Quantity on the Pallet Type 1"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_default_pallet_qty_2
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_default_pallet_qty_2
+msgid "Default Quantity on the Pallet Type 2"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_default_pallet_qty_3
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_default_pallet_qty_3
+msgid "Default Quantity on the Pallet Type 3"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_pallet_type_default_id
+msgid "Default pallet type"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid "Default values for Palettization"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/palletization.py:0
+#, python-format
+msgid "Delete Line !\n"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Delete_Line"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Delete_Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__name
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__des
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Description"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__description_item
+msgid "Description Item"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Destinataire    :"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__display_name
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__display_name
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__display_name
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__display_name
+#: model:ir.model.fields,field_description:palletization.field_res_company__display_name
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__display_name
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_etiq_pallet_model_id
+msgid "Etiquette model For Pallet Etiquette"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Expéditeur      :"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/palletization.py:0
+#, python-format
+msgid "For this line, you must delete all the pallet lines before"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__id
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__id
+#: model:ir.model.fields,field_description:palletization.field_res_company__id
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__id
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__id
+msgid "ID"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product____last_update
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type____last_update
+#: model:ir.model.fields,field_description:palletization.field_di_palletization____last_update
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line____last_update
+#: model:ir.model.fields,field_description:palletization.field_res_company____last_update
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet____last_update
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__write_uid
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__write_uid
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__write_uid
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__write_uid
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__write_uid
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__write_date
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__write_date
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__write_date
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__write_date
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__write_date
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__line_id
+msgid "Line id"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Lot"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid "Manage Pallets"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Max Quantity"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__name
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__name
+msgid "Name"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "New_Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__no_pallet
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__no_pallet
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__print_pallet_id
+msgid "No Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,help:palletization.field_di_pallet_product__pack_num
+msgid "Number of packages per pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_sale_order__di_pallet_number
+msgid "Number of pallet"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Order Lines"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__uom_qty
+msgid "Order Quantity"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__order_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__order_id
+msgid "Order Reference"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Ordered Qty"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__package
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Package"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__package_total
+msgid "Package total"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__pack_num
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Packages number"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__packaging_date
+msgid "Packaging Date"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Palette         :"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid "Palettization"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_pallet_description
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_pallet_description
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Pallet Description"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__pallet_no
+msgid "Pallet Number"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_di_pallet_product
+#: model_terms:ir.ui.view,arch_db:palletization.view_pallet_product_form
+#: model_terms:ir.ui.view,arch_db:palletization.view_pallet_product_tree
+msgid "Pallet Product"
+msgstr ""
+
+#. module: palletization
+#: model:ir.actions.act_window,name:palletization.di_action_pallet_product
+msgid "Pallet Products"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_di_pallet_type
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__pallet_type_id
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_type__name
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+#: model_terms:ir.ui.view,arch_db:palletization.view_pallet_type_form
+#: model_terms:ir.ui.view,arch_db:palletization.view_pallet_type_tree
+msgid "Pallet Type"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_pallet_type_1
+msgid "Pallet Type 1"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_pallet_type_2
+msgid "Pallet Type 2"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_pallet_type_3
+msgid "Pallet Type 3"
+msgstr ""
+
+#. module: palletization
+#: model:ir.actions.act_window,name:palletization.di_action_pallet_type
+msgid "Pallet Types"
+msgstr ""
+
+#. module: palletization
+#: model:ir.actions.report,name:palletization.action_report_pallet
+msgid "Pallet label"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__paltyp_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__paltyp_id
+#: model:ir.model.fields,field_description:palletization.field_sale_order__di_type_pallet
+#: model:ir.model.fields,field_description:palletization.field_sale_order_line__di_paltyp_id
+msgid "Pallet type"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_pallet_type_1
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_pallet_type_1
+msgid "Pallet type 1"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_pallet_type_2
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_pallet_type_2
+msgid "Pallet type 2"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_pallet_type_3
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_pallet_type_3
+msgid "Pallet type 3"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid "Pallet type default"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_di_palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_sale_order_form_view
+msgid "Palletization"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_di_palletization_line
+msgid "Palletization Line"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_sale_order__palletization_ids
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Palletization Lines"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_sale_order__palletization_line_ids
+msgid "Palletization Pallets"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_sale_order__palletization_print_ids
+msgid "Palletization Print"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__palletization_id
+msgid "Palletization Reference"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Palletization for the Order :"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Print Etiquette Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__line_pallet_ids
+msgid "Print pallet lines"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_res_config_settings__di_etiq_pallet_printer_id
+msgid "Printer For Pallet Etiquette"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__product_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__product_id
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__product_id
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Product"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_pallet_product__product_tmpl_id
+msgid "Product template"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__product_id
+msgid "Products to print"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__quantity
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "Quantity"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__quantity
+msgid "Quantity of the product"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__pallet_qty
+msgid "Quantity on the Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization__residual_qty
+msgid "Residual Quantity"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__sale_order_id
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__sale_order_id
+msgid "Sale Order"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Sales Order Lines"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__etab_exped_id
+msgid "Sender"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__sending_date
+msgid "Sending Date"
+msgstr ""
+
+#. module: palletization
+#: model:ir.actions.act_window,name:palletization.palettization_action_config_settings
+msgid "Settings"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.res_config_settings_palettization_form
+msgid "These values are default values for Palettization"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std_old
+msgid "Transporteur    :"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/inh_parameter_config.py:0
+#, python-format
+msgid "Type Pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,help:palletization.field_di_palletization__paltyp_id
+#: model:ir.model.fields,help:palletization.field_di_palletization_line__paltyp_id
+#: model:ir.model.fields,help:palletization.field_sale_order_line__di_paltyp_id
+msgid "Type of the pallet for the line"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__type_pallet
+msgid "Type pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_product_product__di_pallet_product_ids
+#: model:ir.model.fields,field_description:palletization.field_product_template__di_pallet_product_ids
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Type pallet for this Product"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_product_pallet_form_inherited
+msgid "Type pallet for this Product."
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.di_palletization_form
+msgid "Update Qty"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__use_pal
+msgid "Use of the pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__use_pal_total
+msgid "Use of the pallet total"
+msgstr ""
+
+#. module: palletization
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "Utilis."
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet_line__weight
+#: model_terms:ir.ui.view,arch_db:palletization.report_etiquette_pallet_std
+msgid "Weight"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_di_palletization_line__weight
+msgid "Weight of the product"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model.fields,field_description:palletization.field_wiz_print_pallet__weight_total
+msgid "Weight total"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_wiz_print_pallet
+msgid "Wizard print etiquette pallet"
+msgstr ""
+
+#. module: palletization
+#: model:ir.model,name:palletization.model_wiz_print_pallet_line
+msgid "Wizard print etiquette pallet - lines"
+msgstr ""
+
+#. module: palletization
+#: code:addons/palletization/models/palletization.py:0
+#, python-format
+msgid "You must select a pallet."
+msgstr ""
+
+#. module: palletization
+#: model:ir.actions.act_window,name:palletization.action_di_palletization
+msgid "palletization"
+msgstr ""

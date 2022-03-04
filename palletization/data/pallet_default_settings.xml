@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         
+    </data>
+    <data noupdate="1">
+        
+        <record id="pal_type_pallet"  model="di.pallet.type">
+            <field name="name">EUR-EPAL</field>
+            <field name="des">Pallet type Europe</field>
+            <field name="company_id">1</field>   
+        </record>  
+        
+        <record id="pal_default_settings" model="res.config.settings">
+            <field name="di_pallet_type_default_id" ref="palletization.pal_type_pallet" />
+        </record>    
+
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('pal_default_settings')]"/>                            
+        </function>   
+        
+
+      
+        
+   
+    </data>
+</odoo>

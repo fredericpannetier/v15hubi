@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_di_palletization,di_palletization_group_user,model_di_palletization,base.group_user,1,1,1,1
+access_di_palletization_line,di_palletization_line_group_user,model_di_palletization_line,base.group_user,1,1,1,1
+
+access_di_tables_pallet_type,access_di_tables_pallet_type,model_di_pallet_type,base.group_user,1,1,1,1
+access_di_tables_pallet_product,access_di_tables_pallet_product,model_di_pallet_product,base.group_user,1,1,1,1
+
+
+access_wiz_print_pallet,wiz_print_pallet_group_user,model_wiz_print_pallet,base.group_user,1,1,1,1
+access_wiz_print_pallet_line,wiz_print_pallet_line_group_user,model_wiz_print_pallet_line,base.group_user,1,1,1,1

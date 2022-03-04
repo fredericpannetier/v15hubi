@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--Pallet Product -->
+    <record id="view_pallet_type_tree" model="ir.ui.view">
+        <field name="name">di.pallet.type.tree</field>
+        <field name="model">di.pallet.type</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Pallet Type">
+                <field name="name"/>
+                <field name="des"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_pallet_type_form" model="ir.ui.view">
+        <field name="name">di.pallet.type.form</field>
+        <field name="model">di.pallet.type</field>
+        <field name="arch" type="xml">
+            <form string="Pallet Type">
+                <sheet string="Pallet Type">
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                        <field name="name"/>
+                        <field name="des"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="di_action_pallet_type" model="ir.actions.act_window">
+        <field name="name">Pallet Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.pallet.type</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+    
+    
+    <!--Pallet Product -->
+    <record id="view_pallet_product_tree" model="ir.ui.view">
+        <field name="name">di.pallet.product.tree</field>
+        <field name="model">di.pallet.product</field>
+        <field name="arch" type="xml">
+            <tree default_order="name" string="Pallet Product">
+                <field name="name"/>
+                <field name="product_tmpl_id"/>                
+                <!--<field name="packaging_id"/>-->
+                <field name="pallet_type_id"/>
+                <field name="pack_num"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_pallet_product_form" model="ir.ui.view">
+        <field name="name">di.pallet.product.form</field>
+        <field name="model">di.pallet.product</field>
+        <field name="arch" type="xml">
+            <form string="Pallet Product">
+                <sheet modifiers="{}" string="Pallet Product">
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                        <field name="name"/>
+                        <field name="product_tmpl_id"/>                
+                        <!--<field name="packaging_id"/>-->
+                        <field name="pallet_type_id"/>
+                        <field name="pack_num"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="di_action_pallet_product" model="ir.actions.act_window">
+        <field name="name">Pallet Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.pallet.product</field>        
+        <field name="view_mode">tree,form</field>        
+    </record>
+ </odoo>

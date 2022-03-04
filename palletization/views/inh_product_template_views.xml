@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="di_product_pallet_form_inherited" model="ir.ui.view">
+        <field name="name">product.pallet.form.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field eval="100" name="priority"/>
+        <field name="arch" type="xml">
+             <xpath expr="//page[@name='general_information']" position="after">
+                <page name="characteristic" string="Characteristic" >
+                    <group name="characteristic_row">
+                        <group name="characteristic_row_1">
+                        <div class="o_row" name="pallet_des">
+                            <label for="di_pallet_description" string="Pallet Description "/>
+                            <field name="di_pallet_description" />
+                        </div>
+                        </group>
+                        
+                        <group name="characteristic_row_2">
+                            <field name="di_pallet_product_ids" >
+                                <tree name="product_pallet_tree" string="Type pallet for this Product" editable="bottom">
+                                    
+                                    <field name="name"/>
+                                    <!--<field name="packaging_id"/>-->
+                                    <field name="pallet_type_id"/>
+                                    <field name="pack_num"/>
+                                </tree>
+                                <form name="product_pallet_form" string="Type pallet for this Product.">
+                                    <label for="name" string="Description "/>
+                                    <field name="name"/>
+                                    <!--<field name="packaging_id"/>-->
+                                    <label for="pallet_type_id" string="Pallet Type"/>
+                                    <field name="pallet_type_id"/>
+                                    <label for="pack_num" string="Packages number"/>
+                                    <field name="pack_num"/>
+                                </form>
+                            </field>
+                        </group>
+                        
+                        <!-->
+                        <group name="characteristic_row_3">
+                        <div class="o_row" name="pallet_qty_1">
+                            <label for="di_pallet_type_1" string="Default quantity on pallet "/>
+                            <field name="di_pallet_type_1" />
+                            <label for="di_default_pallet_qty_1" string=""/>
+                            <field name="di_default_pallet_qty_1" nolabel="1" />
+                        </div>
+
+                        <div class="o_row" name="pallet_qty_2">
+                            <label for="di_pallet_type_2" string="Default quantity on pallet "/>
+                            <field name="di_pallet_type_2" />
+                            
+                            <field name="di_default_pallet_qty_2" nolabel="1" />
+                        </div>
+
+                        <div class="o_row" name="pallet_qty_3">
+                            <label for="di_pallet_type_3" string="Default quantity on pallet "/>
+                            <field name="di_pallet_type_3" />
+                            
+                            <field name="di_default_pallet_qty_3" nolabel="1"/>
+                        </div>
+                        </group>
+                        -->
+                        
+                    </group> 
+                </page>    
+            </xpath>  
+        </field>
+    </record>
+
+
+ 
+</odoo>
