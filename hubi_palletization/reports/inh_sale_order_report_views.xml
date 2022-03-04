@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hubipal_saleorder_carrier_report_pivot" model="ir.ui.view">
+         <field name="name">hubi_palletization.saleorder.pal.carrier.report.pivot</field>
+         <field name="model">sale.report.carrier</field>
+         <field name="inherit_id" ref="hubi.view_hubi_saleorder_carrier_report_pivot"/>
+         <field name="arch" type="xml">
+            <xpath expr="//field[@name='weight']" position="after">
+                <field name="pallet_number" type="measure"/>
+             </xpath>
+         </field>
+    </record>
+  
+    <record id="view_hubipal_saleorder_report_carrier_tree" model="ir.ui.view" >
+        <field name="name">hubi_palletization.saleorder.report.carrier.tree</field>
+        <field name="model">sale.report.carrier</field>       
+        <field name="inherit_id" ref="hubi.view_hubi_saleorder_carrier_report_pivot"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='weight']" position="after">
+                <field name="pallet_number" sum="Total Pallet"/>
+            </xpath>
+        </field>
+    </record>
+    
+       
+  
+  
+
+    
+  
+    
+</odoo>

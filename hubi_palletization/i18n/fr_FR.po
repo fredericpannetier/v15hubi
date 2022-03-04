@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hubi_palletization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 09:54+0000\n"
+"PO-Revision-Date: 2021-04-29 09:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hubi_palletization
+#: model:ir.model.fields,field_description:hubi_palletization.field_di_palletization__display_name
+#: model:ir.model.fields,field_description:hubi_palletization.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nom Affiché"
+
+#. module: hubi_palletization
+#: model:ir.model.fields,field_description:hubi_palletization.field_di_palletization__id
+#: model:ir.model.fields,field_description:hubi_palletization.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hubi_palletization
+#: model:ir.model.fields,field_description:hubi_palletization.field_di_palletization____last_update
+#: model:ir.model.fields,field_description:hubi_palletization.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: hubi_palletization
+#: model:ir.model,name:hubi_palletization.model_di_palletization
+msgid "Palletization"
+msgstr "Palettisation"
+
+#. module: hubi_palletization
+#: model:ir.model,name:hubi_palletization.model_sale_order
+msgid "Sales Order"
+msgstr "Commandes"

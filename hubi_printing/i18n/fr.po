@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hubi_printing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 09:55+0000\n"
+"PO-Revision-Date: 2021-04-29 09:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hubi_printing
+#: model:ir.ui.menu,name:hubi_printing.menu_hubi_etiquet_models
+msgid "Etiquette models"
+msgstr "Etiquette modèles"
+
+#. module: hubi_printing
+#: model:ir.ui.menu,name:hubi_printing.menu_hubi_etiquet_printing
+msgid "Etiquette printing"
+msgstr "Impression Etiquette"
+
+#. module: hubi_printing
+#: model:ir.ui.menu,name:hubi_printing.menu_hubi_etiquet_parameter
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: hubi_printing
+#: model:ir.ui.menu,name:hubi_printing.menu_hubi_printers
+msgid "Printers"
+msgstr "Imprimante"

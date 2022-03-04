@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu Etiquette printing -->
+    <menuitem id="menu_hubi_etiquet_printing" name="Etiquette printing" sequence="90" parent="hubi_menu.menu_hubi" />   
+        <!--<menuitem id="menu_hubi_print_label" name="Print etiquette" sequence="10" parent="menu_hubi_etiquet_printing" action="hubi_printing.hubi_action_print_etiquet" />   -->
+        <menuitem id="menu_hubi_printers" name="Printers" sequence="20" parent="menu_hubi_etiquet_printing" action="printing.action_miadi_etiquette_printer" />
+        <menuitem id="menu_hubi_etiquet_models" name="Etiquette models" sequence="30" parent="menu_hubi_etiquet_printing" action="printing.action_miadi_etiquette_etiqmodel" />
+        <menuitem id="menu_hubi_etiquet_parameter" name="Parameters" sequence="40" parent="menu_hubi_etiquet_printing" action="printing.action_miadi_etiquette_parameter"/>            
+</odoo>

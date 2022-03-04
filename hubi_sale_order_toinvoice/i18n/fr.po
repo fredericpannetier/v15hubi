@@ -1,0 +1,21 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hubi_sale_order_toinvoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 09:56+0000\n"
+"PO-Revision-Date: 2021-04-29 09:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hubi_sale_order_toinvoice
+#: model:ir.ui.menu,name:hubi_sale_order_toinvoice.menu_hubi_sale_orders_create_invoice
+msgid "Create Invoice From Periodicity"
+msgstr "Création Factures Périodiques"

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu create invoice periodicity-->
+        <menuitem id="menu_hubi_sale_orders_create_invoice" sequence="40" parent="hubi_menu.menu_hubi_sales_documents" action="sale_order_toinvoice_period.action_create_invoiceperiod"  />
+</odoo>
