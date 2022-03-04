@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="hubi_product_template_form_inherited" model="ir.ui.view">
+            <field name="name">product.form.hubi.inherited</field>
+            <field name="model">product.template</field>
+             <field name="mode">primary</field>
+            <field name="priority" eval="5"/>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form" position="inside">
+                    <link rel="stylesheet" href="/hubi/static/src/css/style.css"/>
+                </xpath>
+                
+                <xpath expr="//form" position="inside">
+                    <link rel="stylesheet" href="/hubi/static/src/css/style.css"/>
+                </xpath>
+
+                <xpath expr="//field[@name='categ_id']" position="after">
+                           
+                    <field name="di_caliber_id"  context="{'default_main_level': 'Product', 'default_level': 'Caliber', 'default_level_product': 'Caliber'}" 
+                    domain="['|',  ('company_id', '=',company_id) , ('company_id', '=', False) , ('record_type', '=', 'Caliber') ]" />
+                    <!--domain="[('record_type', '=', 'Caliber'),('company_id', '=',company_id)]" /> -->
+                    <field name="di_packaging_id"  context="{'default_main_level': 'Product', 'default_level': 'Packaging', 'default_level_product': 'Packaging'}" 
+                    domain="['|',  ('company_id', '=',company_id) , ('company_id', '=', False) , ('record_type', '=', 'Packaging') ]" />
+                    <!--domain="[('record_type', '=', 'Packaging'),('company_id', '=',company_id)]" /> -->
+
+                </xpath>     
+ 
+                 <xpath expr="//field[@name='uom_po_id']" position="after">
+                    <label for="volume" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"/>
+                    <div name="div0" class="o_row" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+                        <field name="volume" />
+                        <span attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" >m³</span>
+                    </div>
+                    <label for="weight" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"/>
+                    <div name="div1" class="o_row" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
+                        <field name="weight" />
+                        <span attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" >kg</span>
+                    </div>
+                    <field name="di_quantity" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}"/>
+                </xpath>
+                
+                <xpath expr="//page[@name='general_information']" position="after">
+                    <page name="etiquette" string="Etiquette" >
+                        <group name="etiquette_row">
+                            <group name="etiquette_row_1">
+                                <field name="di_etiquette" />
+                                <field name="di_etiq_printer" />
+                                <field name="di_etiq_model" />
+                                <div name="div3">
+                                    <label for="di_product_color" string="The Color is " class="oe_magenta"  attrs="{'invisible': [('di_product_color', '!=', '#FF00FF')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_blue"  attrs="{'invisible': [('di_product_color', '!=', '#0000FF')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_yellow"  attrs="{'invisible': [('di_product_color', '!=', '#FFFF00')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_red"  attrs="{'invisible': [('di_product_color', '!=', '#FF0000')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_green"  attrs="{'invisible': [('di_product_color', '!=', '#008000')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_brown"  attrs="{'invisible': [('di_product_color', '!=', '#D2691E')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_white"  attrs="{'invisible': [('di_product_color', '!=', '#FFFFFF')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_grey"  attrs="{'invisible': [('di_product_color', '!=', '#CCCCCC')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_pink"  attrs="{'invisible': [('di_product_color', '!=', '#FFC0CB')]}"/>
+                                    <label for="di_product_color" string="The Color is " class="oe_white"  attrs="{'invisible': [('di_product_color', '!=', False)]}"/>
+                                </div>
+                                <field name="di_product_color"  nolabel="1" />
+                            </group>
+                            <group name="etiquette_row_2">
+                                <field name="di_etiq_mention" />
+                                <field name="di_etiq_description"  />
+                                <field name="di_etiq_latin"  />
+                                <field name="di_etiq_spanish" />
+                                <field name="di_etiq_english" />
+                                <field name="di_etiq_italian" />
+                                <field name="di_etiq_portuguese" />
+                                <field name="bom_count" invisible="1"/>
+                            </group>
+
+                        </group>
+                        
+                        
+                        
+                        <group name="button"  attrs="{'invisible': [('bom_count', '&lt;&gt;', 0)]}">
+
+                            <button type="action" name="%(action_wiz_confirm_dialog)d"
+                            string="Update label for packaging"
+                            context="{'default_confirm_message': 'Are you sure you want to update the etiquette for the other products',
+                            'default_code_message': 'label-etiq'}"
+                            class="oe_button oe_form_button oe_highlight"
+                            />
+                        </group>
+                        
+                    </page>
+                </xpath>
+                
+                <xpath expr="//page[@name='etiquette']" position="after">
+                    <page name="statistics" string="Statistics">
+                        <group name="statistics_group">
+                            <field name="di_statistics_alpha_1"/>
+                            <field name="di_statistics_alpha_2"/>
+                            <field name="di_statistics_alpha_3"/>
+                            <field name="di_statistics_alpha_4"/>
+                            <field name="di_statistics_alpha_5"/>
+                        </group>
+                    </page>
+                </xpath>
+ 
+             </field>
+        </record>  
+  
+        
+        <record id="product_template_search_view_hubi" model="ir.ui.view">
+             <field name="name">product.template.search.nobom</field>
+             <field name="model">product.template</field>
+             <field name="inherit_id" ref="product.product_template_search_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//filter[@name='services']" position="after">
+                    <filter string="Only type Consum" name="consu" domain="[('type','=','consu')]"/>
+                    <filter string="Only type Product" name="product" domain="[('type','=','product')]"/>
+                 </xpath>
+<!-->
+                 <xpath expr="//filter[@name='consumable']" position="after">
+                    <filter string="No Components" name="no_components" domain="[('bom_count','>=',1)]"/>
+                    <separator/>
+                 </xpath>
+-->
+                 <xpath expr="//field[@name='name']" position="after">
+                    <group name="search_group" expand="0" string="Group by">
+                        <filter name="category" context="{'group_by':'categ_id'}" domain="[]" string="Category"/>
+                        <filter name="caliber" context="{'group_by':'di_caliber_id'}" domain="[]" string="Caliber"/>
+                    </group> 
+                 </xpath>
+             </field>
+        </record>
+  
+        <record id="view_hubi_module_tree" model="ir.ui.view" >
+            <field name="name">hubi.product.tree</field>
+            <field name="priority" eval="1"/>
+            <field name="model">product.template</field>        
+            <field name="arch" type="xml">
+                <tree string="Product" decoration-info="type=='product'" default_order="categ_id, di_caliber_id, default_code" >
+                   
+                    <field name="default_code"/>
+                    <field name="categ_id"/>
+                    <field name="di_caliber_id"/>
+                    <field name="di_packaging_id"/>
+                    <field name="name"/>
+                    <field name="list_price"/>
+                    <field name="standard_price"/>
+                    <field name="weight"/>
+                    <field name="uom_id" options="{'no_open': True, 'no_create': True}" groups="product.group_uom"/>
+                    <field name="di_quantity"/>
+                    <field name="type"/>
+                    <field name="active" invisible="1"/>
+                    <!--<field name="bom_count" invisible="1"/>-->
+                </tree>
+            </field>
+        </record>       
+        
+        <record id="action_hubi_product_template" model="ir.actions.act_window" >
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="context">{'default_type': 'product' , 'group_by': ['categ_id', 'di_caliber_id']}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="action_hubi_sellable_product_template" model="ir.actions.act_window" >
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="context">{'search_default_consumable': 1, 'default_type': 'product', 'search_default_filter_to_sell': 1, 'group_by': ['categ_id', 'di_caliber_id']}</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="view_hubi_module_tree"/>
+        </record>
+        
+        <record id="action_hubi_purchasable_product_template" model="ir.actions.act_window" >
+            <field name="name">Products</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="context">{'search_default_consumable': 1, 'default_type': 'product', 'search_default_filter_to_purchase': 1}</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="view_hubi_module_tree"/>
+        </record>
+        
+         <record id="hubi_product_category_form_inherited" model="ir.ui.view">
+            <field name="name">product.category.form.hubi.inherited</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field eval="99" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="di_reference"/>
+                    <field name="di_shell"/>
+                    <field name="di_nb_day_dluo"/>
+                    <field name="di_category_caliber_ids" nolabel="1">
+                        <tree string="Category Caliber">
+                            <field name="caliber_id"/>
+                        </tree>
+                        
+                    </field>
+                    <button name="action_create_products" type="object" string="Create Products" context="{'categ_id': id}" class="oe_button oe_form_button oe_highlight" />
+                </xpath>
+            </field>
+        </record> 
+        
+        <record id="view_product_category_caliber_form" model="ir.ui.view">
+            <field name="name">hubi.product.category.caliber.form</field>
+            <field name="model">hubi.product_category_caliber</field>
+            <field name="arch" type="xml">
+                <form string="Category Caliber">
+                    <group name="category_caliber_group" col="4">
+                        <field name="caliber_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+ 
+   </data>
+ 
+</odoo>

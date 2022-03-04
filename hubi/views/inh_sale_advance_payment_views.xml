@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="hubi_sale_advance_payment_inv_view" model="ir.ui.view">
+        <field name="name">hubi.sale.advance.payment.inv.form</field>
+        <field name="model">sale.advance.payment.inv</field>
+        <field name="inherit_id" ref="sale.view_sale_advance_payment_inv"/>
+        <field name="arch" type="xml">
+  
+            <xpath expr="//field[@name='deposit_taxes_id']" position="after">
+                <field name="invoice_date" />
+            </xpath>
+                       
+        </field>
+    </record>
+  
+    
+    
+    </data>
+ 
+</odoo>

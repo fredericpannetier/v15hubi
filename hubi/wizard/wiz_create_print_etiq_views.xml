@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+  
+    <record id="wiz_create_print_etiq_form_view" model="ir.ui.view">
+        <field name="name">wiz.createprintetiq.form1</field>
+        <field name="model">wiz_create_print_etiq</field>
+        <field name="arch" type="xml">
+            <form string="Create Print Etiquette">
+            
+                <div class="oe_title">
+                
+                    <group name="groupe_01">
+                        <group name="groupe_01-01">
+                        <field name="packaging_date"  />
+                        </group>
+                        <group name="groupe_002">
+                        <field name="sending_date" />
+                        </group>
+                    </group>
+                
+                    <group name="groupe_02">
+                        <group name="groupe_02-01">
+                            <field name="partner_id" domain="[('di_is_establishment', '=', False)]"  /> <!-- domain="[('is_company', '=', False), ('parent_id', '=', False)]" -->
+                            <field name="carrier_id" />
+                        </group>
+                        <group name="groupe_02-02">
+                            <field name="etabexp_id" domain="[('di_is_establishment','=',True)]"/> <!--domain="[('is_company','=',True), ('customer_rank','=',0), ('supplier_rank','=',0)]" -->
+                            <field name="health_number" readonly="1" />
+                            <field name="code_128"  />
+                        </group>
+                    </group>
+                   
+                    <group name="groupe_03">  
+                        <group name="groupe_03-01">                  
+                            <label class="oe_edit_only" for="category_id" string="Category"/>
+                            <field name="category_id" class="oe_edit_only" nolabel="1"/>
+                            <label class="oe_edit_only" for="caliber_id" string="Caliber"/>
+                            <field name="caliber_id" class="oe_edit_only" nolabel="1"/>
+                            <label class="oe_edit_only" for="packaging_id" string="Packaging"/>
+                            <field name="packaging_id" class="oe_edit_only" nolabel="1"/>
+                    
+                            <field name="product_id"  />
+                        </group>
+                        <group name="groupe_03-02">
+                            <field name="code_barre"  />
+                            
+                            <field name="pds"  />
+                            <field name="nb_mini"  />
+                            <field name="numlot"  />
+                            <field name="date_dluo"  />                        
+                        </group>
+                    </group>
+                    
+                    <group name="groupe_04">
+                        <field name="qte"  />
+                        <field name="color_etiq"  />
+                        <field name="model_id"  />
+                        <field name="printer_id" />
+                    </group>
+                    
+                </div>
+                <separator />
+ 
+                <footer>
+                    <button string="Create and Print Label" type="object" name="create_print_etiq"
+                        default_focus="1" class="oe_link"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+               
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hubi_create_print_etiq" model="ir.actions.act_window">
+        <field name="name">Create Print Etiquette</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz_create_print_etiq</field>
+        <field name="view_id" ref="wiz_create_print_etiq_form_view"/>        
+        <field name="view_mode">tree,form</field>
+        <field name="target">new</field>
+    </record> 
+    
+    
+ 
+</odoo>

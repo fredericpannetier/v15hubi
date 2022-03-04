@@ -1,0 +1,96 @@
+﻿id,code,name,country_id
+state_base.fr_01,01,AIN,France
+state_base.fr_10,10,AUBE,France
+state_base.fr_11,11,AUDE,France
+state_base.fr_12,12,AVEYRON,France
+state_base.fr_13,13,BOUCHES DU RHONE,France
+state_base.fr_14,14,CALVADOS,France
+state_base.fr_15,15,CANTAL,France
+state_base.fr_16,16,CHARENTE,France
+state_base.fr_17,17,CHARENTE MARITIME,France
+state_base.fr_18,18,CHER,France
+state_base.fr_19,19,CORREZE,France
+state_base.fr_02,02,AISNE,France
+state_base.fr_20,20,CORSE,France
+state_base.fr_21,21,COTES D'OR,France
+state_base.fr_22,22,COTES D'ARMOR,France
+state_base.fr_23,23,CREUSE,France
+state_base.fr_24,24,DORDOGNE,France
+state_base.fr_25,25,DOUBS,France
+state_base.fr_26,26,DROME,France
+state_base.fr_27,27,EURE,France
+state_base.fr_28,28,EURE ET LOIR,France
+state_base.fr_29,29,FINISTERE,France
+state_base.fr_03,03,ALLIER,France
+state_base.fr_30,30,GARD,France
+state_base.fr_31,31,GARONNE HAUTE,France
+state_base.fr_32,32,GERS,France
+state_base.fr_33,33,GIRONDE,France
+state_base.fr_34,34,HERAULT,France
+state_base.fr_35,35,ILE ET VILAINE,France
+state_base.fr_36,36,INDRE,France
+state_base.fr_37,37,INDRE ET LOIRE,France
+state_base.fr_38,38,ISERE,France
+state_base.fr_39,39,JURA,France
+state_base.fr_04,04,ALPES BASSES,France
+state_base.fr_40,40,LANDES,France
+state_base.fr_41,41,LOIR ET CHER,France
+state_base.fr_42,42,LOIRE,France
+state_base.fr_43,43,LOIRE HAUTE,France
+state_base.fr_44,44,LOIRE ATLANTIQUE,France
+state_base.fr_45,45,LOIRET,France
+state_base.fr_46,46,LOT,France
+state_base.fr_47,47,LOT ET GARONNE,France
+state_base.fr_48,48,LOZERE,France
+state_base.fr_49,49,MAINE ET LOIRE,France
+state_base.fr_05,05,ALPES HAUTES,France
+state_base.fr_50,50,MANCHE,France
+state_base.fr_51,51,MARNE,France
+state_base.fr_52,52,MARNE HAUTE,France
+state_base.fr_53,53,MAYENNE,France
+state_base.fr_54,54,MEURTHE ET MOSELLE,France
+state_base.fr_55,55,MEUSE,France
+state_base.fr_56,56,MORBIHAN,France
+state_base.fr_57,57,MOSELLE,France
+state_base.fr_58,58,NIEVRE,France
+state_base.fr_59,59,NORD,France
+state_base.fr_06,06,ALPES MARITIME,France
+state_base.fr_60,60,OISE,France
+state_base.fr_61,61,ORNE,France
+state_base.fr_62,62,PAS DE CALAIS,France
+state_base.fr_63,63,PUY DE DOME,France
+state_base.fr_64,64,PYRENEES ATLANTIQUES,France
+state_base.fr_65,65,PYRENEES HAUTES,France
+state_base.fr_66,66,PYRENEES ORIENTALES,France
+state_base.fr_67,67,RHIN BAS,France
+state_base.fr_68,68,RHIN HAUT,France
+state_base.fr_69,69,RHONE,France
+state_base.fr_07,07,ARDECHE,France
+state_base.fr_70,70,SAONE HAUTE,France
+state_base.fr_71,71,SAONE ET LOIRE,France
+state_base.fr_72,72,SARTHE,France
+state_base.fr_73,73,SAVOIE,France
+state_base.fr_74,74,SAVOIE HAUTE,France
+state_base.fr_75,75,PARIS,France
+state_base.fr_76,76,SEINE MARITIME,France
+state_base.fr_77,77,SEINE ET MARNE,France
+state_base.fr_78,78,YVELINES,France
+state_base.fr_79,79,SEVRES DEUX,France
+state_base.fr_08,08,ARDENNES,France
+state_base.fr_80,80,SOMME,France
+state_base.fr_81,81,TARN,France
+state_base.fr_82,82,TARN ET GARONNE,France
+state_base.fr_83,83,VAR,France
+state_base.fr_84,84,VAUCLUSE,France
+state_base.fr_85,85,VENDEE,France
+state_base.fr_86,86,VIENNE,France
+state_base.fr_87,87,VIENNE HAUTE,France
+state_base.fr_88,88,VOSGES,France
+state_base.fr_89,89,YONNE,France
+state_base.fr_09,09,ARIEGE,France
+state_base.fr_90,90,BELFORT,France
+state_base.fr_91,91,ESSONNE,France
+state_base.fr_92,92,HAUTS DE SEINE,France
+state_base.fr_93,93,SEINE SAINT DENIS,France
+state_base.fr_94,94,VAL DE MARNE,France
+state_base.fr_95,95,VAL D'OISE,France

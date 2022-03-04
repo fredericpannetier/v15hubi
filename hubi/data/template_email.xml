@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="email_template_invoice" model="mail.template">
+        <field name="name">Invoice_send</field>
+        <field name="email_from">${user.email}</field>
+        <field name="subject">Your invoices</field>
+        <field name="model">account.move</field>
+        <field name="body_html"><![CDATA[
+<p>Dear,
+Your invoices.
+<br/>
+Best regards,
+<br/>
+${object.create_uid.signature | safe}  
+</p>
+]]></field>
+    </record>
+    
+    <record id="email_template_sale_order" model="mail.template">
+        <field name="name">Sale_Order_send</field>
+        <field name="email_from">${user.email}</field>
+        <field name="subject">Your sale orders</field>
+        <field name="model">sale.order</field>
+        <field name="body_html"><![CDATA[
+<p>Dear,
+Your sale orders.
+<br/>
+Best regards,
+<br/>
+${object.create_uid.signature | safe}  
+</p>
+]]></field>
+    </record>
+    
+
+
+</odoo>

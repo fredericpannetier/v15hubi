@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="create_product_from_category_form_view" model="ir.ui.view">
+            <field name="name">create.product.from.category.form.view</field>
+            <field name="priority" eval="1"/>
+            <field name="model">wiz.create.product.from.category</field>
+            <field name="arch" type="xml">
+  
+                <tree string="Create Product From Category" name='Create_Product_From_Category' editable="top">
+                    <button string="Create_Product" type="object" name="create_product" icon="fa-paper-plane text-success"/>
+                    <field name="categ_id" invisible="1"/>
+                    <field name="categ_reference" readonly="1"/>
+                    <field name="categ_name" readonly="1"/>
+                    <field name="caliber_id" invisible="1"/>
+                    <field name="packaging_id" invisible="1"/>
+                    <field name="caliber_name" readonly="1"/>
+                    <field name="packaging_name" readonly="1"/>
+                    <field name="weight"/>
+                    <field name="quantity"/>
+                    <field name="price"/>
+                    <field name="etiq_printer"/>
+                    <field name="account_income_id" />
+                    <field name="account_expense_id" />
+                    <button string="Cancel" class="oe_link" special="cancel" icon="fa-times-circle text-danger"/>
+                    
+                         
+                </tree>
+                    
+            </field>
+    </record>
+
+    <record id="create_product_from_category_search" model="ir.ui.view">
+        <field name="name">create.product.from.category.search</field>
+        <field name="model">wiz.create.product.from.category</field>
+        <field name="arch" type="xml">
+            <search string="Create Product">
+                <!--<field name="product_id" />-->
+                <filter domain="[('caliber_id', '=', 'Caliber')]" name="caliber" string="Caliber"/>
+                <filter domain="[('packaging_id', '=', 'Packaging')]" name="packaging" string="Packaging"/>             
+                <separator/>                
+                <group expand="0" string="Group by">
+                    <filter name="caliber_id" context="{'group_by':'caliber_id'}" domain="[]" string="Caliber"/>
+                    <filter name="packaging_id" context="{'group_by':'packaging_id'}" domain="[]" string="Packaging"/>
+                </group>               
+            </search>
+        </field>
+    </record>
+    
+</odoo>

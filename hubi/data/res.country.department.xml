@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data  noupdate="1">
+
+        <!-- French Department-->
+
+        <record id="depart_01" model="res.country.state">
+            <field name="name">AIN</field>
+            <field name="code">01</field>
+            <field name="country_id">75</field>
+        </record>
+        
+        <record id="depart_02" model="res.country.state">
+            <field name="name">AISNE</field>
+            <field name="code">02</field>
+            <field name="country_id">75</field>
+        </record>
+        
+        <record id="depart_03" model="res.country.state">
+            <field name="name">ALLIER</field>
+            <field name="code">03</field>
+            <field name="country_id">75</field>
+        </record>
+
+        <record id="depart_04" model="res.country.state">
+            <field name="name">ALPES BASSES</field>
+            <field name="code">04</field>
+            <field name="country_id">75</field>
+        </record>
+     </data>
+</odoo>

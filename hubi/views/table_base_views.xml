@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+       <record id="department_search" model="ir.ui.view">
+        <field name="name">department.search</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <search string="Search department">
+                <field name="name" />
+                <field name="code" />
+                <filter string="France" name="country" domain="[('country_id.code','=','FR')]"/>
+                <separator/>                
+            </search>
+        </field>
+    </record>
+   
+    <record id="view_hubi_department_tree" model="ir.ui.view" >
+            <field name="name">hubi.department.tree</field>
+            <field name="priority" eval="1"/>
+            <field name="model">res.country.state</field>        
+            <field name="arch" type="xml">
+                <tree string="Department" default_order = "code" import="true" create="true">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="country_id"/>
+                </tree>
+            </field>
+        </record>
+    
+    <record id="hubi_department_form" model="ir.ui.view">
+        <field name="name">hubi.department.form</field>
+        <field name="model">res.country.state</field>
+        <field name="arch" type="xml">
+            <form string="Department">
+                <header>
+                </header>
+                <sheet>
+                    <div name="department_0001" class="oe_title">
+                        <H1>
+                            <field name="name" default_focus="1" placeholder="Name of the department"/>                             
+                        </H1>
+                    </div> 
+                    <group name="table_001">
+                        <group name="table_002">
+                            <field name="code"/>
+                            <field name="country_id"/>
+                        </group>
+
+                    </group>
+                </sheet>
+                               
+            </form>
+        </field>
+    </record>
+ 
+  
+   <record id="action_hubi_department" model="ir.actions.act_window">
+        <field name="name">Department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.country.state</field>
+        <field name="search_view_id" ref="department_search"/>
+        <field name="context">{"search_default_country":1}</field>
+                 
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+                Listing of the departments.
+            </p>
+        </field>
+    </record>    
+ 
+ <!--> 
+    <record id="family_product_search" model="ir.ui.view">
+        <field name="name">family.search</field>
+        <field name="model">hubi.family</field>
+        <field name="arch" type="xml">
+            <search string="Search family">
+                <field name="name" />
+                <filter domain="[('level', '=', 'Caliber')]" name="family" string="Caliber"/>
+                <filter domain="[('level', '=', 'Packaging')]" name="family" string="Packaging"/>             
+                <separator/>                
+                <group name="table_005" expand="0" string="Group by">
+                    <filter name="level" context="{'group_by':'level'}" domain="[]" string="Level"/>
+                </group>               
+            </search>
+        </field>
+    </record>
+   
+    <record id="view_hubi_family_tree" model="ir.ui.view" >
+            <field name="name">hubi.family.tree</field>
+            <field name="model">hubi.family</field>        
+            <field name="arch" type="xml">
+                <tree string="Family" default_order = "name" import="false" create="true">
+                    <field name="name"/>
+                    <field name="reference"/>
+                    <field name="default_value"/>
+                    <field name="level"/>
+                   
+                    <field name="company_id" groups="base.group_multi_company" />
+                </tree>
+            </field>
+    </record>
+    
+    <record id="hubi_family_form" model="ir.ui.view">
+        <field name="name">hubi.family.form</field>
+        <field name="model">hubi.family</field>
+        <field name="arch" type="xml">
+            <form string="Family">
+                <header>
+                </header>
+                <sheet>
+                    <div name="family_0001" class="oe_title">
+                        <H1>
+                            <field name="name" default_focus="1" placeholder="Name of the family"/>                             
+                        </H1>
+                    </div> 
+                    <group name="family_001">
+                        <group name="family_002">
+                            
+                            <field name="level" />
+                          
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                            <field name="reference"/>
+                            <field name="default_value"/>
+                            <field name="weight" attrs="{'invisible': [('level', '!=', 'Packaging')]}"/>
+                            <field name="sale_ok" attrs="{'invisible': [('level', '!=', 'Packaging')]}"/>
+                            <field name="purchase_ok" attrs="{'invisible': [('level', '!=', 'Packaging')]}"/>
+                        </group>
+
+                    </group>
+                </sheet>
+                               
+            </form>
+        </field>
+    </record>
+    
+    
+    <record id="action_hubi_product_family" model="ir.actions.act_window">
+        <field name="name">Family</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hubi.family</field>
+        <field name="view_id" ref="view_hubi_family_tree"/>
+        <field name="search_view_id" ref="family_product_search"/> 
+        
+        <field name="context">{'group_by':'level'}</field>  
+       
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+                Listing of the families.
+            </p>
+        </field>
+    </record>
+-->
+
+    <record id="miadi_family_product_search" model="ir.ui.view">
+        <field name="name">miadi.family.search</field>
+        <field name="model">di.multi.table</field>
+        <field name="inherit_id" ref="multi_table.multi_table_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <filter domain="[('record_type', '=', 'Caliber')]" name="family" string="Caliber"/>
+                <filter domain="[('record_type', '=', 'Packaging')]" name="family" string="Packaging"/>             
+                <filter domain="[('record_type', '=', 'StockPackaging')]" name="family" string="StockPackaging"/>
+            </xpath>
+        </field>
+    </record>
+   
+    <record id="view_miadi_family_tree" model="ir.ui.view" >
+            <field name="name">miadi.family.tree</field>
+            <field name="model">di.multi.table</field>  
+            <field name="inherit_id" ref="multi_table.view_multi_table_tree"/>      
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="string">Product Families</attribute>
+                    
+                </xpath>
+            
+                <xpath expr="//field[@name='record_type']" position="after">
+                    <!--<field name="reference"/>-->
+                    <field name="default_value"/>
+                </xpath>
+            </field>
+    </record>
+    
+    <record id="miadi_family_form" model="ir.ui.view">
+        <field name="name">miadi.family.form</field>
+        <field name="model">di.multi.table</field>
+        <field name="inherit_id" ref="multi_table.multi_table_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                            <!--<field name="reference"/>-->
+                            <field name="default_value"/>
+                            <field name="weight" attrs="{'invisible': [('record_type', '!=', 'Packaging'),('record_type', '!=', 'StockPackaging')]}"/>
+                            <field name="sale_ok" attrs="{'invisible': [('record_type', '!=', 'Packaging')]}"/>
+                            <field name="purchase_ok" attrs="{'invisible': [('record_type', '!=', 'Packaging')]}"/>
+                               
+            </xpath>
+        </field>
+    </record>
+    
+
+ 
+ 
+ 
+</odoo>

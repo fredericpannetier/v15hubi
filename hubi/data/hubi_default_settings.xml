@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         
+    </data>
+    <data noupdate="1">
+        
+        <record id="hubi_default_settings" model="res.config.settings">
+         
+            <field name="di_calcul_lot" eval= "'M'" />
+            <field name="di_calcul_lot_date" eval= "'Sale'" />
+            
+        </record>    
+
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('hubi_default_settings')]"/>                            
+        </function>   
+        
+
+      
+        
+   
+    </data>
+</odoo>

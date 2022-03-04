@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="wiz_print_etiq_sale_view" model="ir.ui.view">
+        <field name="name">wiz.printetiqsale.form1</field>
+        <field name="model">wiz_print_etiq_sale</field>
+        <field name="arch" type="xml">
+            <form string="Print etiquette">
+                <group col="4" colspan="6">
+                    <field name="printer_id"/>
+                    <field name="model_id" />
+                </group>
+            
+                <footer>
+                    <button string="Print" type="object" name="print_etiq" 
+                            default_focus="1" class="oe_link"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+    
+</odoo>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="hubi_sale_order_form_view" model="ir.ui.view">
+        <field name="name">hubi.sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+          
+            <xpath expr="//form/header/field[@name='state']" position="before">
+                <button name="action_search_products" type="object" string="Add Products" 
+                context="{'pricelist_id': pricelist_id}" class="oe_button oe_form_button oe_highlight" />  
+                
+                <!-->
+                <button name="action_palletization" type="object" string="Palletization"  
+                class="oe_button oe_form_button oe_highlight" 
+                attrs="{'invisible': [('state', 'in', ['draft', 'sent', 'cancel'])]}"/>  
+                -->
+                
+                <button name="action_print_etiq" type="object" string="Print Etiquette"  
+                class="oe_button oe_form_button oe_highlight" />
+            </xpath>
+            
+ <!-->            
+            <xpath expr="//field[@name='validity_date']" position="before">
+                <field name="date_order"/>
+            </xpath>
+-->         
+            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                    <attribute name="editable"/>
+            </xpath>
+ 
+               
+            <xpath expr="//field[@name='order_line']/form/group/group/field[@name='product_id']" position="before">
+                <label class="oe_edit_only" for="di_category_id" string="Category"/>
+                <field name="di_category_id" class="oe_edit_only" nolabel="1"/>
+                
+                <label class="oe_edit_only" for="di_caliber_id" string="Caliber"/>
+                <field name="di_caliber_id" class="oe_edit_only" nolabel="1"/>
+                <label class="oe_edit_only" for="di_packaging_id" string="Packaging"/>
+                <field name="di_packaging_id" class="oe_edit_only" nolabel="1"/>
+                
+            </xpath>
+           
+
+            <xpath expr="//field[@name='order_line']/form/group/group/field[@name='tax_id']" position="after">
+                <field name="di_no_lot"/>
+                <field name="di_weight" readonly="1"/>
+                <field name="di_price_weight" readonly="1"/>
+                <field name="di_date_dluo" readonly="1"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='order_line']/form/field[@name='name']" position="after">
+                <label for="di_commentary"/>
+                <field name="di_commentary"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='tax_id']" position="replace"/>
+<!--            
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_uom']" position="replace"/>
+            
+            
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="replace"/>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="name" invisible="1" />
+            </xpath>
+-->            
+            <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+                <field name="di_no_lot" />
+                <field name="di_date_dluo" />
+                
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                <!--<field name="product_uom" invisible="1"/>-->
+                <field name="di_weight" readonly="1"/>
+            </xpath>
+            
+            <xpath expr="//field[@name='order_line']/tree/field[@name='price_total']" position="before">
+                <field name="tax_id" widget="many2many_tags" options="{'no_create': True}" domain="[('type_tax_use','=','sale'),('company_id','=',parent.company_id)]"
+                    attrs="{'readonly': [('qty_invoiced', '&gt;', 0)]}"/>
+            </xpath>
+            
+            <!--<xpath expr="//field[@name='di_pallet_number']" position="replace"/>-->
+            
+            <xpath expr="//group[@name='sales_person']" position="after">
+                <group string="Other Information" name="sale_info">
+                    <label for="di_sending_date"/>
+                    <div name="sending_0001" class="o_row">
+                    <field name="di_sending_date" />
+                    
+                    <field name="di_calcul_lot" invisible = "1" />
+                    <button
+                        type="action"
+                        name="%(action_wiz_confirm_dialog)d"
+                        class="btn-link mb4 fa fa-lightbulb-o"
+                        attrs="{'invisible': [('di_calcul_lot', '=', 'M')]}"
+                        context="{'default_confirm_message': 'Are you sure you want to update the batch number for the lines', 
+                            'default_code_message': 'sale_batch-number'}"
+                        />
+                    </div>    
+                    <field name="di_packaging_date"/>
+                    
+                </group>
+            
+                <group name="hubi_palettization_row" string="Palletization">
+                    <field name="di_pallet_number"/>
+                </group>
+             
+            </xpath>
+  
+            <xpath expr="//field[@name='order_line']" position="after">      
+                <button name="action_search_products" type="object" string="Add Products" context="{'pricelist_id': pricelist_id}" class="oe_button oe_form_button oe_highlight" />
+            </xpath>    
+           
+            <xpath expr="//page[3]" position="after">
+                <page name="note" string="Note" >
+                    <field name="di_comment" />
+                </page>    
+            </xpath>
+ 
+            <xpath expr="//group[@name='sale_shipping']" position="after">
+            
+                <label for="carrier_id"/>
+                <field name="carrier_id" />
+            </xpath>
+  
+        </field>
+    </record>
+    
+    
+    
+  
+    <record id="hubi_sale_order_tree_view" model="ir.ui.view">
+        <field name="name">hubi.sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+<!-->
+            <xpath expr="//field[@name='confirmation_date']" position="replace"/>
+             <field name="confirmation_date"  string="Confirmation Date"/>
+-->          
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="date_order"  string="Order Date" />
+               
+            </xpath>
+
+        </field>
+    </record>
+         
+    <record id="hubi_sale_order_form_search" model="ir.ui.view">
+        <field name="name">hubi.sale.order.form.search</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+                <separator/>
+                <filter string="Order Date" name="filter_order_date" date="date_order"/>  
+            
+                <filter string="Order Today" name="ordertoday" domain="[('date_order', '&gt;=', context_today().strftime('%%Y-%%m-%%d'))]"/>
+<!-->
+                <filter string="This Month" name="this_month" domain="[('date_order', '&gt;=', context_today().strftime('%%Y-%%m-01'))]"/>
+                <filter string="Last Month" name="last_month" domain="['&amp;', ('date_order', '&gt;=', (context_today() - relativedelta(months=1)).strftime('%%Y-%%m-01')), ('sending_date', '&lt;', context_today().strftime('%%Y-%%m-01'))]"/>
+ -->   
+                <separator/>
+            </xpath> 
+        </field>
+    </record> 
+           
+    <record id="sale.action_quotations" model="ir.actions.act_window">
+        <field name="context">{'search_default_draft': 1, 'search_default_sent': 1}</field>
+    </record>
+
+ <!-->       
+        <act_window
+            id="action_wiz_print_etiq_sale"
+            name="Print Etiquette from sale"
+            res_model="wiz.confirm.dialog"
+            binding_model="sale.order"
+            context="{'default_confirm_message': 'Are you sure you want to print etiquette', 
+                            'default_code_message': 'sale_order_print_etiq'}"
+            view_mode="form"
+            binding_views="form"
+            target="new"
+            view_id="wiz_confirm_dialog_form">    
+        </act_window>
+-->      
+    <record id="action_wiz_print_etiq_sale" model="ir.actions.act_window">
+        <field name="name">Print Etiquette from sale</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz.confirm.dialog</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wiz_confirm_dialog_form"/>
+        <field name="context">{'default_confirm_message': 'Are you sure you want to print etiquette', 
+                            'default_code_message': 'sale_order_print_etiq'}</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">list</field>
+    </record>
+   
+        
+        <record id="action_email_sale_order_send_server" model="ir.actions.server">
+            <field name="name">Email: Send email</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_sale_order"/>
+            <field name="binding_model_id" ref="sale.model_sale_order"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                    action = records.sale_order_send_email() </field>
+            
+        </record>
+    
+    </data>
+</odoo>
