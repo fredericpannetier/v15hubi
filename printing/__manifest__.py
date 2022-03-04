@@ -9,7 +9,7 @@ This module configures your printing.
 """,
     'author': 'Difference informatique - MIADI',
     'depends': [
-        'base', 'base_setup'
+        'base', 'base_setup', 'sale'
         
     ],
     'data': [
