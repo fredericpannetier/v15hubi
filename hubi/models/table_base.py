@@ -53,7 +53,7 @@ class HubiMultiTable(models.Model):
         vals = [("Caliber", "Caliber"),("Packaging", "Packaging"),("StockPackaging", "Stock Packaging")]
         return vals
     
-    record_type = fields.Selection('_get_record_type', string="Level", Required=True, track_visibility=True )
+    record_type = fields.Selection('_get_record_type', string="Level", required=True, tracking=True) #track_visibility=True )
 
     #reference = fields.Char(string='Reference')
     default_value = fields.Boolean(string='Default Value', default=False)

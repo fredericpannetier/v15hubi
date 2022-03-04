@@ -109,7 +109,7 @@ class HubiAccountInvoice(models.Model):
     di_discount_rate = fields.Float('Discount Amount', digits=(16, 2), readonly=True,
                                  states={'draft': [('readonly', False)]})
     di_amount_discount = fields.Monetary(string='Discount', store=True, readonly=True, compute='_compute_amount',
-                                      track_visibility='always')
+                                      tracking=True) #track_visibility='always')
 
     #di_amount_before_discount = fields.Monetary(string='Amount before discount',
     #           store=True, readonly=True, compute='_compute_amount', track_visibility='always')
