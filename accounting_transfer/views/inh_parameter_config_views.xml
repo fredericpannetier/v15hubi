@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="res_config_settings_transfer_form" model="ir.ui.view">
+    <field name="name">Config Settings for My Accounting_Transfer</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+            <div class="app_settings_block" data-string="Accounting_Transfer" string="Accounting_Transfer" data-key="accounting_transfer" groups="account.group_account_manager" > <!--  -->
+            <t groups="account.group_account_user">
+                <h2>Accounting_Transfer</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="These values are default values for Accounting_Transfer">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Default Values</span>
+                            <span class="fa fa-lg fa-building-o" title="Values set here are company-specific." aria-label="Values set here are company-specific." groups="base.group_multi_company" role="img"/>
+                            <div class="text-muted">
+                                Default values for Accounting_Transfer
+                            </div>
+                          
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Auxiliary Accounting" for="auxiliary_accounting" class="col-lg-5 o_light_label"/>
+                                    <field name="auxiliary_accounting" />
+                                </div>
+  
+                                <div class="row mt16">
+                                    <label string="Root Account Auxiliary Customer" for="root_account_auxiliary_customer" class="col-lg-5 o_light_label"/>
+                                    <field name="root_account_auxiliary_customer" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Root Account Auxiliary Supplier" for="root_account_auxiliary_supplier" class="col-lg-5 o_light_label"/>
+                                    <field name="root_account_auxiliary_supplier" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Length Account Auxiliary" for="length_account_auxiliary" class="col-lg-5 o_light_label"/>
+                                    <field name="length_account_auxiliary" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Length Account General" for="length_account_general" class="col-lg-5 o_light_label"/>
+                                    <field name="length_account_general" />
+                                </div>
+                            </div>
+                            
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Account File Transfer" for="account_file_transfer" class="col-lg-5 o_light_label"/>
+                                    <field name="account_file_transfer" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="writing File Transfer" for="writing_file_transfer" class="col-lg-5 o_light_label"/>
+                                    <field name="writing_file_transfer" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Path Account Transfer" for="path_account_transfer" class="col-lg-5 o_light_label"/>
+                                    <field name="path_account_transfer" />
+                                </div>
+                            </div>
+                            
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Type Accounting" for="type_accounting" class="col-lg-5 o_light_label"/>
+                                    <field name="type_accounting" />
+                                </div>
+                                <div class="row mt16">
+                                    <label string="Mail Accounting" for="mail_accounting" class="col-lg-5 o_light_label"/>
+                                    <field name="mail_accounting" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </t>
+            </div>
+        </xpath>
+    </field>
+</record> 
+  
+    <record id="accountingtransfert_action_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_transfer_form" />
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'accounting_transfer'}</field>
+    </record>  
+   
+ 
+</odoo>

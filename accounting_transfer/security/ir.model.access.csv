@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_accounting_di_parameter,accounting_di_parameter_group_user,model_di_accounting_parameter,base.group_user,1,1,1,1
+access_accounting_wiz_parameter,accounting_wiz_parameter_group_user,model_wiz_accounting_parameter,base.group_user,1,1,1,1
+access_accounting_wiz_transfer,accounting_wiz_transfer_group_user,model_wiz_accountingtransfer,base.group_user,1,1,1,1

@@ -1,0 +1,479 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* accounting_transfer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-23 11:49+0000\n"
+"PO-Revision-Date: 2021-09-20 15:26+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: accounting_transfer
+#: model:mail.template,body_html:accounting_transfer.email_template_accounting_transfer
+msgid ""
+"\n"
+"<p>Dear,\n"
+"You have been invited to transfer your writting from  ${object.date_start.strftime('%d/%m/%Y')} to  ${object.date_end.strftime('%d/%m/%Y')}\n"
+" in your accounting.\n"
+"<br/>\n"
+"Best regards,\n"
+"<br/>\n"
+"${object.create_uid.signature | safe}\n"
+"</p>\n"
+msgstr ""
+"\n"
+"<p>Bonjour,\n"
+"Vous pouvez transférer vos écritures de ${object.date_start.strftime('%d/%m/%Y')} à  ${object.date_end.strftime('%d/%m/%Y')}\n"
+" dans votre compta.\n"
+"<br/>\n"
+"Cordialement,\n"
+"<br/>\n"
+"${object.create_uid.signature | safe}\n"
+"</p>\n"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid ""
+"<span class=\"o_form_label\">Default Values</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">Valeurs par défaut</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Les valeurs ci-dessous sont spécifiques à la société.\" aria-label=\"Les valeurs ci-dessous sont spécifiques à la société.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Account File"
+msgstr "Fichier comptable des comptes"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Account File Transfer"
+msgstr "Fichier comptable des comptes"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__compta_data
+msgid "Accounting File"
+msgstr "Fichier comptable des écritures"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_di_accounting_parameter
+msgid "Accounting Parameter"
+msgstr "Paramètres comptabilité"
+
+#. module: accounting_transfer
+#: model:ir.actions.act_window,name:accounting_transfer.action_miadi_transfert_compta
+#: model:ir.ui.menu,name:accounting_transfer.menu_miadi_transfert_compta
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Accounting Transfer"
+msgstr "Transfert comptable"
+
+#. module: accounting_transfer
+#: model:ir.ui.menu,name:accounting_transfer.menu_accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Accounting_Transfer"
+msgstr "Transfert comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_account_move_line__di_account_aux
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.view_account_move_form
+msgid "Auxilary Account"
+msgstr "Compte auxiliaire"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_partner__di_auxiliary_account_customer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_users__di_auxiliary_account_customer
+msgid "Auxiliary Account Customer"
+msgstr "Compte Auxiliaire Client"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_partner__di_auxiliary_account_supplier
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_users__di_auxiliary_account_supplier
+msgid "Auxiliary Account Supplier"
+msgstr "Compte Auxiliaire Fournisseur"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__auxiliary_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__auxiliary_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__auxiliary_accounting
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Auxiliary Accounting"
+msgstr "Comptabilité Auxiliaire"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Cancel"
+msgstr "Annulation"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__company_id
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__complete_0_account_auxiliary
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__complete_0_account_auxiliary
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__complete_0_account_auxiliary
+msgid "Complete right with 0 Account Auxiliary"
+msgstr "Complète à droite avec des 0 le Compte Auxiliaire"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__complete_0_account_general
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__complete_0_account_general
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__complete_0_account_general
+msgid "Complete right with 0 Account General"
+msgstr "Complète à droite avec des 0 le Compte Général"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres Configuration"
+
+#. module: accounting_transfer
+#: model:ir.ui.menu,name:accounting_transfer.menu_miadi_config_parameter
+msgid "Configuration Parameter"
+msgstr "Paramètres Configuration"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta_step2
+msgid "Create Price"
+msgstr "Créer prix"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__create_uid
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__create_uid
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__create_uid
+msgid "Created by"
+msgstr "Créée par"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__create_date
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__create_date
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__create_date
+msgid "Created on"
+msgstr "Créée le"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Default values for Accounting_Transfer"
+msgstr "Valeur par défaut pour le transfert comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__display_name
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_partner__display_name
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__display_name
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: accounting_transfer
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__di_accounting_parameter__type_accounting__ebp
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__res_config_settings__type_accounting__ebp
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__wiz_accounting_parameter__type_accounting__ebp
+msgid "EBP"
+msgstr "EBP"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__date_end
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,help:accounting_transfer.field_wiz_accountingtransfer__date_end
+msgid "Ending date for the the creation of invoices"
+msgstr "Date de fin pour la création des factures"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__account_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__account_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__account_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__account_file_transfer
+msgid "File For Account Transfer"
+msgstr "Fichier pour le Transfert Comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__writing_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__writing_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__writing_file_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__writing_file_transfer
+msgid "File For Writing Transfer"
+msgstr "Fichier des Ecritures Comptables"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__filename
+msgid "Filename"
+msgstr "Nom du Fichier"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_account_move_line__id
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__id
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__id
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_partner__id
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__id
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__id
+msgid "ID"
+msgstr "ID"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__message
+msgid "Information"
+msgstr "Information"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_account_move_line
+msgid "Journal Item"
+msgstr "Écriture comptable"
+
+#. module: accounting_transfer
+#: model:ir.ui.menu,name:accounting_transfer.menu_account_moves_all
+msgid "Journal Items"
+msgstr "Écriture comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__journal_ids
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter____last_update
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_partner____last_update
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter____last_update
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__write_uid
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__write_uid
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__write_uid
+msgid "Last Updated by"
+msgstr "Dernière MAJ par"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__write_date
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__write_date
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__write_date
+msgid "Last Updated on"
+msgstr "Dernière MAJ le"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Length Account Auxiliary"
+msgstr "Longueur Compte Auxiliaire"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Length Account General"
+msgstr "Longueur Compte Général"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__length_account_auxiliary
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__length_account_auxiliary
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__length_account_auxiliary
+msgid "Length for Account Auxiliary"
+msgstr "Longueur Compte Auxiliaire"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__length_account_general
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__length_account_general
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__length_account_general
+msgid "Length for Account General"
+msgstr "Longueur Compte Général"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__template_id
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Mail"
+msgstr "Mail"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Mail Accounting"
+msgstr "Adresse Mail du Comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.constraint,message:accounting_transfer.constraint_di_accounting_parameter_unique_name_company
+msgid "Name must be unique for the company"
+msgstr "Le nom doit être unique pour l'entreprise"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta_step2
+msgid "OK"
+msgstr "OK"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__partner_data
+msgid "Partner File"
+msgstr "Fichier Partenaire"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__partner_filename
+msgid "Partner Filename"
+msgstr "Nom Fichier Partenaire"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Path"
+msgstr "Chemin"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Path Account Transfer"
+msgstr "Chemin Transfert Comptable"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__path_account_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__path_account_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__path_account_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__path_account_transfer
+msgid "Path For Account Transfer"
+msgstr "Chemin Transfert Comptable"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Periods"
+msgstr "Périodes"
+
+#. module: accounting_transfer
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__di_accounting_parameter__type_accounting__quadra
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__res_config_settings__type_accounting__quadra
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__wiz_accounting_parameter__type_accounting__quadra
+msgid "QUADRA"
+msgstr "QUADRA"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__re_transfer
+msgid "Re-Transfer"
+msgstr "Re-Transfert"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Retransfer"
+msgstr "Retransfert"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__root_account_auxiliary_customer
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__root_account_auxiliary_customer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__root_account_auxiliary_customer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Root Account Auxiliary Customer"
+msgstr "Racine Compte Auxiliaire Client"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__root_account_auxiliary_supplier
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__root_account_auxiliary_supplier
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__root_account_auxiliary_supplier
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Root Account Auxiliary Supplier"
+msgstr "Racine Compte Auxiliaire Fournisseur"
+
+#. module: accounting_transfer
+#: model:ir.model.fields.selection,name:accounting_transfer.selection__res_config_settings__type_accounting__sage
+msgid "SAGE"
+msgstr "SAGE"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__mail_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__mail_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__mail_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__mail_accounting
+msgid "Send Email"
+msgstr "Envoyez Email"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Send Mail"
+msgstr "Envoyez Email"
+
+#. module: accounting_transfer
+#: model:ir.actions.act_window,name:accounting_transfer.accountingtransfert_action_config_settings
+msgid "Settings"
+msgstr "Paramètres"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accountingtransfer__date_start
+msgid "Start Date"
+msgstr "Date Début"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,help:accounting_transfer.field_wiz_accountingtransfer__date_start
+msgid "Starting date for the creation of invoices"
+msgstr "Date de début de la création des factures"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "These values are default values for Accounting_Transfer"
+msgstr "Ces valeurs sont des valeurs par défaut pour le Transfert Comptable"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.view_account_move_form
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_account_move_line__di_transfer_accounting
+msgid "Transfer Accounting"
+msgstr "Transfert Comptable"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "Type Accounting"
+msgstr "Type de comptabilité"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__type_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_res_config_settings__type_accounting
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__type_accounting
+msgid "Type of accounting"
+msgstr "Type de comptabilité"
+
+#. module: accounting_transfer
+#: model:mail.template,subject:accounting_transfer.email_template_accounting_transfer
+msgid "Vos fichiers comptables"
+msgstr "Vos fichiers comptables"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_wiz_accounting_parameter
+msgid "Wizard Accounting Parameter"
+msgstr "Assistant Paramètres Comptables"
+
+#. module: accounting_transfer
+#: model:ir.model,name:accounting_transfer.model_wiz_accountingtransfer
+msgid "Wizard accounting transfer "
+msgstr "Assistant Transfert Comptable "
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.wiz_transfert_compta
+msgid "Writing File"
+msgstr "Fichier des Ecritures"
+
+#. module: accounting_transfer
+#: model:ir.model.fields,field_description:accounting_transfer.field_di_accounting_parameter__name
+#: model:ir.model.fields,field_description:accounting_transfer.field_wiz_accounting_parameter__name
+msgid "name"
+msgstr "nom"
+
+#. module: accounting_transfer
+#: model_terms:ir.ui.view,arch_db:accounting_transfer.res_config_settings_transfer_form
+msgid "writing File Transfer"
+msgstr "transfert Fichier des Ecritures"

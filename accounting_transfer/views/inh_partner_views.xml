@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="view_account_auxiliary_form" model="ir.ui.view">
+            <field name="name">partner.auxiliary_account.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='accounting']/group /group [@name='accounting_entries']/field[@name='property_account_receivable_id']" position="after">
+                    <field name="di_auxiliary_account_customer"  /> 
+                </xpath>
+                <xpath expr="//page[@name='accounting']/group /group [@name='accounting_entries']/field[@name='property_account_payable_id']" position="after">
+                    <field name="di_auxiliary_account_supplier"  /> 
+                </xpath>
+            </field>
+        </record>
+
+</odoo>

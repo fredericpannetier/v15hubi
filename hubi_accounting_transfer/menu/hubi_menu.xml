@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu french letter of change -->
+    <menuitem id="menu_hubi_accounting_transfer" name="Accounting Transfert" sequence="93" parent="hubi_menu.menu_hubi" />
+        <menuitem id="transfer_account_moves_all_menu" sequence="20" parent="menu_hubi_accounting_transfer" action="account.action_account_moves_all_a"  />
+        <menuitem id="transfer_compta_menu" name="Accounting Transfer" sequence="40" parent="menu_hubi_accounting_transfer" action="accounting_transfer.action_miadi_transfert_compta"  />
+                   
+</odoo>

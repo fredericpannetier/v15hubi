@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="menu_accounting_transfer" name="Accounting_Transfer" sequence="200" web_icon="accounting_transfer,static/description/balance.png"/>
+        <menuitem id="menu_account_moves_all" sequence="20" parent="menu_accounting_transfer" action="account.action_account_moves_all_a"  />
+        <menuitem id="menu_miadi_transfert_compta" name="Accounting Transfer" sequence="40" parent="menu_accounting_transfer" action="accounting_transfer.action_miadi_transfert_compta"  />
+        <menuitem id="menu_miadi_config_parameter" name="Configuration Parameter" sequence="150" parent="menu_accounting_transfer"  action="accountingtransfert_action_config_settings" />
+<!--    
+<menuitem id="menu_miadi_config_parameter" name="Configuration Parameter" sequence="150" parent="menu_accounting_transfer"  action="base_setup.action_general_configuration" />        
+        <menuitem id="menu_accounting_parameter"  sequence="100" parent="menu_accounting_transfer" action="accounting_transfer.action_accounting_parameter"/>
+
+        
+        <menuitem id="menu_payment_transfer" name="Payment Transfer" sequence="30" parent="menu_accounting_transfer" action="action_hubi_account_payments_transfert"  />
+-->
+
+</odoo>

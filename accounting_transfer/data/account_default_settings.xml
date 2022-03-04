@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         
+    </data>
+    <data noupdate="1">
+        
+        <record id="account_default_settings" model="res.config.settings">
+         
+            <field name="auxiliary_accounting" eval= "False" />
+            <field name="root_account_auxiliary_customer" eval= "'411'" />
+            <field name="root_account_auxiliary_supplier" eval= "'401'" />
+            <field name="length_account_auxiliary" eval= "8" />
+            <field name="length_account_general" eval= "8" />
+            <field name="complete_0_account_auxiliary" eval= "False" />
+            <field name="complete_0_account_general" eval= "False" />
+            <field name="account_file_transfer" eval= "'comptes.txt'" />
+            <field name="writing_file_transfer" eval= "'ecritures.txt'" />
+            <field name="type_accounting" eval= "'EBP'" />
+            <field name="mail_accounting" eval= "False" />
+        </record>    
+
+        <function model="res.config.settings" name="execute">
+            <value eval="[ref('account_default_settings')]"/>                            
+        </function>   
+        
+
+      
+        
+   
+    </data>
+</odoo>
