@@ -41,4 +41,5 @@
     'installable': True,
     'application': False,
     'auto_install': False,
+    'license': 'OPL-1',
 }

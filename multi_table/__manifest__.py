@@ -33,4 +33,5 @@
        
     ],
     'installable': True,    
+    'license': 'OPL-1',
 }
