@@ -23,7 +23,7 @@
 					<menuitem id="menu_hubi_sale_order_report_weight" name="Summary Weight" sequence="40" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_weight"  />
 					<menuitem id="menu_hubi_sale_order_report_carrier" name="Summary Carrier" sequence="50" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_carrier"  />
 					<menuitem id="menu_hubi_sale_order_report_reference" name="Summary Invoice Order" sequence="60" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_reference"  />
-				<menuitem id="menu_hubi_sale_team_report" sequence="20" parent="hubi_menu.menu_hubi_sales_reports" action="sales_team.crm_team_salesteams_act"  />
+				<!-- ICI menuitem id="menu_hubi_sale_team_report" sequence="20" parent="hubi_menu.menu_hubi_sales_reports" action="sales_team.crm_team_salesteams_act"  / -->
 				<menuitem id="menu_hubi_sale_all_channels_report" sequence="30" parent="hubi_menu.menu_hubi_sales_reports" action="sale.report_all_channels_sales_action"  />
 			<menuitem id="menu_hubi_sales_print_etiq" name="Print Label" parent="hubi_menu.menu_hubi_sales" sequence="5"  action="hubi.action_hubi_create_print_etiq" />
     <!-->
@@ -84,7 +84,7 @@
         <menuitem id="menu_hubi_datas" name="Datas" sequence="80" parent="menu_hubi" />
     -->    
             <menuitem id="menu_hubi_shippers" name="Carrier" sequence="10" parent="hubi_menu.menu_hubi_datas" action="delivery.action_delivery_carrier_form" />
-            <menuitem id="menu_hubi_sales_team" name="Sales Team" sequence="10" parent="hubi_menu.menu_hubi_datas" action="sales_team.sales_team_config_action" />
+            <!-- menuitem id="menu_hubi_sales_team" name="Sales Team" sequence="10" parent="hubi_menu.menu_hubi_datas" action="sales_team.sales_team_config_action" / -->
     <!-->
             <menuitem id="menu_hubi_datas_location" name="Locations" sequence="20" parent="menu_hubi_datas" />
     -->        
