@@ -26,7 +26,7 @@ This module configures your printing.
         'data/printing_data.xml'
              ],
     'application': False,
-    #'license': 'OPL-1',
+    'license': 'OPL-1',
    
   
 }
