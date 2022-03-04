@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+       
+  
+    <record id="multi_table_search" model="ir.ui.view">
+        <field name="name">multi.table.search</field>
+        <field name="model">di.multi.table</field>
+        <field name="arch" type="xml">
+            <search string="Search family">
+                <field name="name" />                             
+                <separator/>                
+                <group name="grp_record_type" expand="0" string="Group by">
+                    <filter name="record_type" context="{'group_by':'record_type'}" domain="[]" string="Record type"/>
+                </group>               
+            </search>
+        </field>
+    </record>
+   
+    <record id="view_multi_table_tree" model="ir.ui.view" >
+            <field name="name">multi.table.tree</field>            
+            <field name="model">di.multi.table</field>        
+            <field name="arch" type="xml">
+                <tree string="Table" default_order = "name"  create="true">
+                    <field name="name"/>
+                    <field name="code"/>                    
+                    <field name="record_type"/>                   
+                    <field name="company_id" groups="base.group_multi_company" />
+                </tree>
+            </field>
+    </record>
+    
+    <record id="multi_table_form" model="ir.ui.view">
+        <field name="name">multi.table.form</field>
+        <field name="model">di.multi.table</field>
+        <field name="arch" type="xml">
+            <form string="Table">
+                <header>
+                </header>
+                <sheet>
+                    <div name="Table_name" class="oe_title">
+                        <H1>
+                            <field name="name" default_focus="1" placeholder="Name"/>                             
+                        </H1>
+                    </div> 
+                    <group name="table_charac">
+                        <group name="table_charac2">                            
+                            <field name="record_type" />                          
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                            <field name="code"/>                            
+                        </group>
+
+                    </group>
+                </sheet>
+                               
+            </form>
+        </field>
+    </record>
+    
+    
+    <record id="action_multi_table" model="ir.actions.act_window">
+        <field name="name">Table</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.multi.table</field>
+        <field name="view_id" ref="view_multi_table_tree"/>
+        <field name="search_view_id" ref="multi_table_search"/> 
+        
+        <field name="context">{'group_by':'record_type'}</field>  
+       
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Aide
+            </p>
+            <p>
+                Listing of the entries.
+            </p>
+        </field>
+    </record>
+
+ 
+</odoo>
