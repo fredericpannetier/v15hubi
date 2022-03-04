@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="menu_printing" name="Printing" sequence="200" web_icon="printing,static/description/iconticket.png"/>
+        <menuitem id="menu_miadi_etiquette_printer" name="Printers" sequence="10" parent="menu_printing" action="action_miadi_etiquette_printer"/>
+        <menuitem id="menu_miadi_etiquette_etiq_model" name="Etiquette model" sequence="20" parent="menu_printing" action="action_miadi_etiquette_etiqmodel"/>
+        <menuitem id="menu_miadi_etiquette_parameter" name="Parameters" sequence="30" parent="menu_printing" action="action_miadi_etiquette_parameter"/>
+        <menuitem id="menu_miadi_etiquette_test" name="Test" sequence="40" parent="menu_printing" action="action_menu_wiz_print_etiquette"/>
+
+ 
+
+</odoo>

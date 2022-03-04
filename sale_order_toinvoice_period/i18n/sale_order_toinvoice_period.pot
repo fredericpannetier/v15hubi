@@ -1,0 +1,184 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_toinvoice_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:58+0000\n"
+"PO-Revision-Date: 2021-09-20 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Cancel"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model,name:sale_order_toinvoice_period.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__direct_creat
+msgid "Creat invoice immediatly"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.actions.act_window,name:sale_order_toinvoice_period.action_create_invoiceperiod
+msgid "Create Invoice From Periodicity"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Create Invoice Period"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Create Invoices Period"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__daily
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__daily
+msgid "Daily"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__decade
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__decade
+msgid "Decade"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__ref_end
+msgid "End Customer Reference"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_end
+msgid "End Date"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,help:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_end
+msgid "Ending valid for the the creation of invoices"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__fortnight
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__fortnight
+msgid "Fortnight"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__message
+msgid "Information"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__invoice_date
+msgid "Invoice Date"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_users__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_sale_order__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__periodicity_invoice
+msgid "Invoice Period"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__di_invoice_grouping
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_users__di_invoice_grouping
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_sale_order__di_invoice_grouping
+msgid "Invoice grouping"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__monthly
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__sale_order_ids
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__ref_start
+msgid "Start Customer Reference"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_start
+msgid "Start Date"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,help:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_start
+msgid "Starting date for the creation of invoices"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.view_partner_customer
+msgid "Various"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__weekly
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__weekly
+msgid "Weekly"
+msgstr ""
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model,name:sale_order_toinvoice_period.model_wiz_invoiceperiod
+msgid "Wizard creation of invoice from period"
+msgstr ""

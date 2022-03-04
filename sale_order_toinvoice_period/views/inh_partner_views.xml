@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_customer" model="ir.ui.view">
+            <field name="name">partner.customer</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field eval="90" name="priority"/>
+            <field name="arch" type="xml">
+
+                <!--<xpath expr="//page[@name='sales_purchases']/group/group[@name='misc']/field[@name='industry_id']" position="after">-->
+                <xpath expr="//group[@name='purchase']" position="after">
+                    <group name="sales_purchases_row_1">
+                        <field name="customer_rank" invisible="1" />
+                            <group string="Various" name="sales_purchases_various" attrs="{'invisible': [('customer_rank','=', 0)]}">
+                                 <field name="di_invoice_grouping" attrs="{'invisible': [('customer_rank','=', 0)]}"/>
+                                <field name="di_periodicity_invoice" attrs="{'invisible': [('customer_rank','=', 0)]}"/>
+                            </group>
+                            
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+        
+
+
+ 
+
+
+        
+
+ 
+    
+    </data>
+</odoo>

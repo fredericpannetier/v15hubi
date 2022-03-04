@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+  
+    
+    <record id="wiz_create_invoiceperiod" model="ir.ui.view">
+        <field name="name">wiz.createinvoiceperiod.form1</field>
+        <field name="model">wiz.invoiceperiod</field>
+        <field name="arch" type="xml">
+            <form string="Create Invoices Period">
+                <div class="oe_title">
+                
+                    <label for="periodicity_invoice" />
+                    <h2>
+                        <field name="periodicity_invoice"  colspan="6" />
+                    </h2>
+                    <separator />
+                    <label for="date_start" />
+                    <h2>
+                        <field name="date_start" colspan="6" />
+                    </h2>
+                    <separator />
+                    <label for="date_end" />
+                    <h2>
+                        <field name="date_end" colspan="6" />
+                    </h2>
+                    <separator />
+                    <label for="ref_start" />
+                    <h2>
+                        <field name="ref_start" colspan="6" />
+                    </h2>
+                    <separator />
+                    <label for="ref_end" />
+                    <h2>
+                        <field name="ref_end" colspan="6" />
+                    </h2>                    
+                    
+                    <separator />
+                    <label for="invoice_date" invisible="1" />
+                    <h2>
+                        <field name="invoice_date" invisible="1"/>
+                    </h2>
+                    
+                    <separator />
+                    <label for="direct_creat" />
+                    <h2>
+                        <field name="direct_creat" />
+                    </h2>
+                    
+                </div>
+                <separator />
+
+                <footer>
+                    <button string="Create Invoice Period" type="object" name="create_invoice_period_cron"
+                        default_focus="1" class="oe_link"/>
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_create_invoiceperiod" model="ir.actions.act_window">
+        <field name="name">Create Invoice From Periodicity</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz.invoiceperiod</field>
+        <field name="view_id" ref="wiz_create_invoiceperiod"/>        
+        <field name="view_mode">tree,form</field>
+        <field name="target">new</field>
+    </record> 
+
+<!-->    
+    <menuitem id="menu_sale_invoice_period" name="Sales" sequence="300"  web_icon="sale_order_toinvoice_period,static/description/icon.png"/>
+    <menuitem id="menu_sale_orders_create_invoice" sequence="10" parent="menu_sale_invoice_period" action="action_create_invoiceperiod"  />
+-->
+
+    </data>
+ 
+</odoo>

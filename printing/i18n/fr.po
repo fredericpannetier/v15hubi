@@ -1,0 +1,345 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* printing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-06 15:43+0000\n"
+"PO-Revision-Date: 2021-12-06 15:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: printing
+#: model:ir.model.constraint,message:printing.constraint_di_printing_etiqmodel_uniq_id
+msgid "A etiquette model already exists with this code. It must be unique !"
+msgstr "Un modèle d'étiquette existe déjà avec ce code. Il doit être unique!"
+
+#. module: printing
+#: model:ir.model.constraint,message:printing.constraint_di_printing_printer_uniq_id
+msgid "A printer already exists with this code. It must be unique !"
+msgstr "Une imprimante existe déjà avec ce code. Il doit être unique!"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.wiz_print_etiquette_view
+msgid "Cancel"
+msgstr "Annulation"
+
+#. module: printing
+#: model:ir.model.fields,help:printing.field_di_printing_printer__isimpetiq
+msgid "Checked = etiquette printer, Unchecked = normal printer"
+msgstr "Côché = Imprimante Etiquette, Décôché = Imprimante Normale"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__code
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__code
+msgid "Code"
+msgstr "Code"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__commentary
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__commentary
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__create_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__create_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__create_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__create_uid
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__create_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__create_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__create_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__create_date
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__display_name
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__display_name
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__display_name
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__display_name
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__display_name
+msgid "Display Name"
+msgstr "Nom Affiché"
+
+#. module: printing
+#: model:ir.model.fields.selection,name:printing.selection__di_printing_etiqmodel__langage_print__epl
+msgid "EPL"
+msgstr "EPL"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.view_miadi_etiquette_etiqmodel_tree
+msgid "Etiq models"
+msgstr "Etiquette Modèles"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__etiquette_id
+msgid "Etiquette"
+msgstr "Etiquette"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_etiqmodel_form
+msgid "Etiquette Model"
+msgstr "Etiquette Modèle"
+
+#. module: printing
+#: model:ir.actions.act_window,name:printing.action_miadi_etiquette_etiqmodel
+#: model:ir.model,name:printing.model_di_printing_etiqmodel
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__etiquette_model_id
+#: model:ir.ui.menu,name:printing.menu_miadi_etiquette_etiq_model
+msgid "Etiquette model"
+msgstr "Etiquette Modèle"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__isimpetiq
+msgid "Etiquette printer"
+msgstr "Imprimante Etiquette"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__text_etiq
+msgid "Etiquette text"
+msgstr "Etiquette texte"
+
+#. module: printing
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_etiqmodel
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_parameter
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_printer
+#: model_terms:ir.actions.act_window,help:printing.action_wiz_print_etiquette
+msgid "Help"
+msgstr "Aide"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__id
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__id
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__id
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__id
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__id
+msgid "ID"
+msgstr "ID"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__adressip
+msgid "IP Address"
+msgstr "Adresse IP"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__printed
+msgid "Is printed ?"
+msgstr "Est imprimé ?"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__with_ean128
+msgid "Label with EAN128"
+msgstr "Étiquette avec EAN128"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__langage_print
+msgid "Langage Printing"
+msgstr "Language Impression"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel____last_update
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter____last_update
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer____last_update
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing____last_update
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__write_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__write_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__write_uid
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__write_uid
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__write_uid
+msgid "Last Updated by"
+msgstr "Dernière MAJ par"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__write_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__write_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__write_date
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__write_date
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__write_date
+msgid "Last Updated on"
+msgstr "Dernière MAJ le"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__order_name
+msgid "Linked order"
+msgstr "Commande liée"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__order_line
+msgid "Linked order line"
+msgstr "Ligne Commande liée"
+
+#. module: printing
+#: model:ir.model.fields,help:printing.field_di_printing_printing__order_line
+msgid "Linked to an order line"
+msgstr "Lié à une ligne de commande"
+
+#. module: printing
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_etiqmodel
+#: model_terms:ir.actions.act_window,help:printing.action_wiz_print_etiquette
+msgid "Listing of the etiquette models."
+msgstr "Liste des modèles d'étiquette."
+
+#. module: printing
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_printer
+msgid "Listing of the printers."
+msgstr "Liste des imprimantes."
+
+#. module: printing
+#: model_terms:ir.actions.act_window,help:printing.action_miadi_etiquette_parameter
+msgid "Module parameters"
+msgstr "Module Paramètres"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_etiqmodel__name
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__name
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_etiqmodel_form
+msgid "Name of the etiquette model"
+msgstr "Nom du modèle d'étiquette"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_parameter_form
+msgid "Name of the parameter"
+msgstr "Nom du paramètre"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_printer_form
+msgid "Name of the printer"
+msgstr "Nom de l'imprimante"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__count
+msgid "Number of etiqettes to print"
+msgstr "Nombre d'étiquettes à imprimer"
+
+#. module: printing
+#: model:ir.actions.act_window,name:printing.action_miadi_etiquette_parameter
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_parameter_form
+msgid "Parameter"
+msgstr "Paramètre"
+
+#. module: printing
+#: model:ir.model,name:printing.model_di_printing_parameter
+#: model:ir.ui.menu,name:printing.menu_miadi_etiquette_parameter
+msgid "Parameters"
+msgstr "Paramètres"
+
+#. module: printing
+#: model:ir.model.fields,help:printing.field_di_printing_etiqmodel__text_etiq
+msgid "Paste here copy of etiquette text"
+msgstr "Collez ici une copie du texte de l'étiquette"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__port
+msgid "Port"
+msgstr "Port"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.wiz_print_etiquette_view
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: printing
+#: model:ir.actions.act_window,name:printing.action_menu_wiz_print_etiquette
+#: model:ir.actions.act_window,name:printing.action_wiz_print_etiquette
+msgid "Print etiquette"
+msgstr "Imprimer étiquette"
+
+#. module: printing
+#: model_terms:ir.ui.view,arch_db:printing.wiz_print_etiquette_view
+msgid "Print label"
+msgstr "Imprimer étiquette"
+
+#. module: printing
+#: model:ir.actions.act_window,name:printing.action_miadi_etiquette_printer
+#: model:ir.model,name:printing.model_di_printing_printer
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__printer_id
+#: model:ir.model.fields,field_description:printing.field_wiz_print_etiquette__printer_id
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_printer_form
+msgid "Printer"
+msgstr "Imprimante"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__printer_name
+msgid "Printer name"
+msgstr "Imprimer nom"
+
+#. module: printing
+#: model:ir.ui.menu,name:printing.menu_miadi_etiquette_printer
+#: model_terms:ir.ui.view,arch_db:printing.miadi_etiquette_parameter_tree
+#: model_terms:ir.ui.view,arch_db:printing.view_miadi_etiquette_printer_tree
+msgid "Printers"
+msgstr "Imprimantes"
+
+#. module: printing
+#: model:ir.model,name:printing.model_di_printing_printing
+#: model:ir.ui.menu,name:printing.menu_printing
+msgid "Printing"
+msgstr "Impression"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__printing_date
+msgid "Printing date"
+msgstr "Date Impression"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__real_number_etiq
+msgid "Real number of etiquettes to print"
+msgstr "Nombre réel d'étiquettes à imprimer"
+
+#. module: printing
+#: model:ir.ui.menu,name:printing.menu_miadi_etiquette_test
+msgid "Test"
+msgstr "Test"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printing__etiquette_text
+msgid "Text of label to print"
+msgstr "Texte de l'étiquette à imprimer"
+
+#. module: printing
+#: model:ir.model.fields.selection,name:printing.selection__di_printing_etiqmodel__langage_print__toshiba
+msgid "Toshiba"
+msgstr "Toshiba"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_parameter__value
+msgid "Value"
+msgstr "Valeur"
+
+#. module: printing
+#: model:ir.model.fields,field_description:printing.field_di_printing_printer__realname
+msgid "Windows or Cups name"
+msgstr "Nom Windows ou Cups"
+
+#. module: printing
+#: model:ir.model,name:printing.model_wiz_print_etiquette
+msgid "Wizard print etiquette"
+msgstr "Assistant Impression Etiquette"
+
+#. module: printing
+#: model:ir.model.fields.selection,name:printing.selection__di_printing_etiqmodel__langage_print__zpl
+msgid "ZPL"
+msgstr "ZPL"

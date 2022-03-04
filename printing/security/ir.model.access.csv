@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_printing_labelmodel,printing_etiqmodel_group_user,model_di_printing_etiqmodel,base.group_system,1,1,1,1
+access_printing_printer,printing_printer_group_user,model_di_printing_printer,base.group_system,1,1,1,1
+access_printing_printing,printing_printing_group_user,model_di_printing_printing,base.group_system,1,1,1,1
+access_printing_parameter,printing_parameter_group_user,model_di_printing_parameter,base.group_system,1,1,1,1
+access_printing_wiz_print_etiquette,printing_wiz_print_etiquette_group_user,model_wiz_print_etiquette,base.group_system,1,1,1,1

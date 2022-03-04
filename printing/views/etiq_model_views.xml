@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_miadi_etiquette_etiqmodel_tree" model="ir.ui.view" >
+            <field name="name">miadi_etiquette.etiqmodel.tree</field>
+            <field name="priority" eval="1"/>
+            <field name="model">di.printing.etiqmodel</field>        
+            <field name="arch" type="xml">
+                <tree string="Etiq models" default_order="name"  import="true" create="true">
+                    <field name="name"/>
+                    <field name="code"/>
+                    
+                </tree>
+            </field>
+    </record>
+    
+    <record id="miadi_etiquette_etiqmodel_form" model="ir.ui.view">
+        <field name="name">miadi_etiquette.etiqmodel.form</field>
+        <field name="model">di.printing.etiqmodel</field>
+        <field name="arch" type="xml">
+            <form string="Etiquette Model">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title" name="label_0001">
+                        <H1>
+                            <field name="name" default_focus="1" placeholder="Name of the etiquette model"/>                             
+                        </H1>
+                    </div> 
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="langage_print"/>
+                            <field name="with_ean128"/>
+                            <!--<field name="file"/>-->
+                            <field name="text_etiq"/>
+                            <field name="commentary"/>
+                            
+                        </group>
+                    </group>
+                </sheet>         
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_miadi_etiquette_etiqmodel" model="ir.actions.act_window">
+        <field name="name">Etiquette model</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">di.printing.etiqmodel</field>
+        <field name="search_view_id" ref="view_miadi_etiquette_etiqmodel_tree"/>              
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Help
+            </p>
+            <p>
+                Listing of the etiquette models.
+            </p>
+        </field>
+    </record>
+    
+    
+    <record id="action_wiz_print_etiquette" model="ir.actions.act_window">
+        <field name="name">Print etiquette</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz_print_etiquette</field>
+        <field name="binding_model_id" ref="printing.model_di_printing_etiqmodel"/>        
+        <field name="search_view_id" ref="wiz_print_etiquette_view"/>              
+        <field name="view_mode">form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Help
+            </p>
+            <p>
+                Listing of the etiquette models.
+            </p>
+        </field>
+    </record>
+  
+    <!-- <act_window
+        id="action_wiz_print_etiquette"
+        name="Print etiquette"
+        res_model="wiz_print_etiquette"
+        binding_model="di.printing.etiqmodel"
+        view_mode="form"
+        binding_views="form"
+        target="new"
+        view_id="wiz_print_etiquette_view">    
+    </act_window> -->
+  
+    
+</odoo>

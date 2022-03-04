@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_toinvoice_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-20 12:59+0000\n"
+"PO-Revision-Date: 2021-09-20 15:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr_FR\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Cancel"
+msgstr "Annulation"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model,name:sale_order_toinvoice_period.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__direct_creat
+msgid "Creat invoice immediatly"
+msgstr "Créer une facture immédiatement"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.actions.act_window,name:sale_order_toinvoice_period.action_create_invoiceperiod
+msgid "Create Invoice From Periodicity"
+msgstr "Créer une Facture Périodique"
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Create Invoice Period"
+msgstr "Créer une Facture Périodique"
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.wiz_create_invoiceperiod
+msgid "Create Invoices Period"
+msgstr "Créer une Facture Périodique"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__daily
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__daily
+msgid "Daily"
+msgstr "Quotidien"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__decade
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__decade
+msgid "Decade"
+msgstr "Décade"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__ref_end
+msgid "End Customer Reference"
+msgstr "Référence Client Fin"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_end
+msgid "End Date"
+msgstr "Date Fin"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,help:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_end
+msgid "Ending valid for the the creation of invoices"
+msgstr "Fin valable pour la création de factures"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__fortnight
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__fortnight
+msgid "Fortnight"
+msgstr "Quinzaines"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__message
+msgid "Information"
+msgstr "Information"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__invoice_date
+msgid "Invoice Date"
+msgstr "Date Facture"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_users__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_sale_order__di_periodicity_invoice
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__periodicity_invoice
+msgid "Invoice Period"
+msgstr "Période de facturation"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner__di_invoice_grouping
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_users__di_invoice_grouping
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_sale_order__di_invoice_grouping
+msgid "Invoice grouping"
+msgstr "Regroupement des BLs sur facture"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__write_uid
+msgid "Last Updated by"
+msgstr "Dernière MAJ par"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__write_date
+msgid "Last Updated on"
+msgstr "Dernière MAJ le"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__monthly
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__monthly
+msgid "Monthly"
+msgstr "Mensuelle"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__sale_order_ids
+msgid "Sale Order"
+msgstr "Commande"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__ref_start
+msgid "Start Customer Reference"
+msgstr "Référence Client Début"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,field_description:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_start
+msgid "Start Date"
+msgstr "Date Début"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields,help:sale_order_toinvoice_period.field_wiz_invoiceperiod__date_start
+msgid "Starting date for the creation of invoices"
+msgstr "Date de début de création des factures"
+
+#. module: sale_order_toinvoice_period
+#: model_terms:ir.ui.view,arch_db:sale_order_toinvoice_period.view_partner_customer
+msgid "Various"
+msgstr "Divers"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__res_partner__di_periodicity_invoice__weekly
+#: model:ir.model.fields.selection,name:sale_order_toinvoice_period.selection__wiz_invoiceperiod__periodicity_invoice__weekly
+msgid "Weekly"
+msgstr "Hebdomadaire"
+
+#. module: sale_order_toinvoice_period
+#: model:ir.model,name:sale_order_toinvoice_period.model_wiz_invoiceperiod
+msgid "Wizard creation of invoice from period"
+msgstr "Assistant création de facture périodique"
