@@ -64,20 +64,35 @@
         <field name="dpi">110</field>
     </record>
     
-    <report id="report_partner_list" model="res.partner"  string="Customer List" 
-        report_type="qweb-pdf" name="hubi.report_partner_list_address" file="hubi.report_partner_list_address"
-        paperformat="paperformat_hubi_lowmargin" attachment_use="False">
-    </report>
+    <record id="report_partner_list" model="ir.actions.report">
+        <field name="name">Customer List</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_partner_list_address</field>
+        <field name="report_file">hubi.report_partner_list_address</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat">paperformat_hubi_lowmargin</field>
+    </record>
 
-    <report id="report_partner_sheet" model="res.partner"  string="Customer Sheet" 
-        report_type="qweb-pdf" name="hubi.report_partner_sheet_address" file="hubi.report_partner_sheet_address"
-        paperformat="paperformat_hubi_A4_euro" attachment_use="False">
-    </report>
+    <record id="report_partner_sheet" model="ir.actions.report">
+        <field name="name">Customer Sheet</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_partner_sheet_address</field>
+        <field name="report_file">hubi.report_partner_sheet_address</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat">paperformat_hubi_A4_euro</field>
+    </record>
     
-    <report id="report_productprice_sheet" model="product.pricelist"  string="Product Price Sheet" 
-        report_type="qweb-pdf" name="hubi.report_product_sheet_price" file="hubi.report_product_sheet_price"
-        paperformat="paperformat_hubi_A3_euro" attachment_use="False">
-    </report>
+    <record id="report_productprice_sheet" model="ir.actions.report">
+        <field name="name">Product Price Sheet</field>
+        <field name="model">product.pricelist</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_product_sheet_price</field>
+        <field name="report_file">hubi.report_product_sheet_price</field>
+        <field name="attachment_use">False</field>
+        <field name="paperformat">paperformat_hubi_A3_euro</field>
+    </record>
   
 <!-->
     <report 
@@ -93,37 +108,36 @@
     />
   -->
       
-    <report
-            id="action_report_no_validate_hubi"
-            string="Quotation / Order / No validate / HUBI"
-            model="sale.order"
-            report_type="qweb-pdf"
-            file="hubi.report_sale_order_no_validate_hubi"
-            name="hubi.report_sale_order_no_validate_hubi"
-            paperformat="paperformat_hubi_A4_euro" 
-            print_report_name="(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)"
-    />  
+    <record id="action_report_no_validate_hubi" model="ir.actions.report">
+        <field name="name">Quotation / Order / No validate / HUBI</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_sale_order_no_validate_hubi</field>
+        <field name="report_file">hubi.report_sale_order_no_validate_hubi</field>
+        <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
+        <field name="paperformat">paperformat_hubi_A4_euro</field>
+    </record>
     
-    <report
-            id="action_report_pro_forma_invoice_hubi"
-            string="PRO-FORMA Invoice / HUBI"
-            model="sale.order"
-            report_type="qweb-pdf"
-            file="hubi.report_sale_order_pro_forma_hubi"
-            name="hubi.report_sale_order_pro_forma_hubi"
-            paperformat="paperformat_hubi_A4_euro" 
-            print_report_name="'PRO-FORMA - %s' % (object.name)"
-    />  
+    <record id="action_report_pro_forma_invoice_hubi" model="ir.actions.report">
+        <field name="name">PRO-FORMA Invoice / HUBI</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_sale_order_pro_forma_hubi</field>
+        <field name="report_file">hubi.report_sale_order_pro_forma_hubi</field>
+        <field name="print_report_name">'PRO-FORMA - %s' % (object.name)</field>
+        <field name="paperformat">paperformat_hubi_A4_euro</field>
+    </record>
  
  
-    <report id="report_invoice_summary" 
-        model="account.move"  string="Account Summary" 
-        report_type="qweb-pdf" 
-        name="hubi.report_account_invoice_summary" 
-        file="hubi.report_account_invoice_summary"
-        paperformat="paperformat_hubi_A4_euro" 
-        attachment_use="False">
-    </report>
+    <record id="report_invoice_summary" model="ir.actions.report">
+        <field name="name">Account Summary</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_account_invoice_summary</field>
+        <field name="report_file">hubi.report_account_invoice_summary</field>
+        <field name="attachment_use">False</field>>
+        <field name="paperformat">paperformat_hubi_A4_euro</field>
+    </record>
  
   <!-->
     <report 
@@ -152,16 +166,15 @@
         />
  -->   
         
-    <report 
-            id="report_sale_carrier" 
-            model="sale.report.carrier"  
-            string="Carrier Report" 
-            report_type="qweb-pdf" 
-            name="hubi.report_carrier_delivery_slip" 
-            file="hubi.report_carrier_delivery_slip"
-            paperformat="paperformat_hubi_lowmargin" 
-            attachment_use="False">
-    </report>
+    <record id="report_sale_carrier" model="ir.actions.report">
+        <field name="name">Carrier Report</field>
+        <field name="model">sale.report.carrier</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hubi.report_carrier_delivery_slip</field>
+        <field name="report_file">hubi.report_carrier_delivery_slip</field>
+        <field name="attachment_use">False</field>>
+        <field name="paperformat">paperformat_hubi_lowmargin</field>
+    </record>
     
 
 </odoo>
