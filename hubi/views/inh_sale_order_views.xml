@@ -90,6 +90,7 @@
                     
                     <field name="di_calcul_lot" invisible = "1" />
                     <button
+                        string="Batch calc"
                         type="action"
                         name="%(action_wiz_confirm_dialog)d"
                         class="btn-link mb4 fa fa-lightbulb-o"
