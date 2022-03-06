@@ -23,16 +23,15 @@
             </field>
         </record>
         
-        <act_window
-            id="action_wiz_create_productprice2"
-            name="Create Price"
-            res_model="wiz.productprice"
-            binding_model="product.pricelist"
-            view_mode="form"
-            binding_views="form"
-            target="new"
-            view_id="wiz_create_productprice_step1">    
-        </act_window>
+        <record id="action_wiz_create_productprice2" model="ir.actions.act_window">
+            <field name="name">Create Price</field>
+            <field name="res_model">wiz.productprice</field>
+            <field name="binding_model">product.pricelist</field>
+            <field name="view_mode">form</field>
+            <field name="binding_views">form</field>
+            <field name="target">new</field>
+            <field name="view_id">wiz_create_productprice_step1"</field>
+        </record>
         
         <record id="pricelist_hubi_form_view" model="ir.ui.view">
             <field name="name">pricelist.hubi.form</field>
