@@ -60,11 +60,5 @@
 		<field name="binding_model_id" ref="product.list0"/>
 		<field name="binding_view_types">form</field>
 	</record>
-	<record model="ir.actions.act_window" id="test_action">
-		<field name="name">A Test Action</field>
-		<field name="res_model">some.model</field>
-		<field name="view_mode">graph</field>
-		<field name="view_id" ref="my_specific_view"/>
-	</record>
 
 </odoo>
