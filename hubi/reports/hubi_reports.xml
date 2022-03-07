@@ -17,7 +17,7 @@
     </record>
     
     <record id="paperformat_hubi_A3_euro" model="report.paperformat">
-        <field name="name">European A4</field>
+        <field name="name">European A3</field>
         <field name="default" eval="True" />
         <field name="format">A3</field>
         <field name="page_height">0</field>
@@ -172,7 +172,7 @@
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">hubi.report_carrier_delivery_slip</field>
         <field name="report_file">hubi.report_carrier_delivery_slip</field>
-        <field name="attachment_use">False</field>>
+        <field name="attachment_use">False</field>
         <field name="paperformat">paperformat_hubi_lowmargin</field>
     </record>
     
