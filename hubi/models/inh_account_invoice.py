@@ -169,7 +169,7 @@ class HubiAccountInvoice(models.Model):
             su_id_current = self.env['res.partner'].browse(current_uid)
             
             su_id = self.env['res.partner'].browse(SUPERUSER_ID)
-            template_id = self.env['ir.model.data'].get_object_reference('hubi', 'email_template_invoice')[1]
+            template_id = self.env['ir.model.data'].check_object_reference('hubi', 'email_template_invoice', True)[1]
             template_browse = self.env['mail.template'].browse(template_id)
             # email_to = self.env['res.partner'].browse(ligne.partner_id).email
 

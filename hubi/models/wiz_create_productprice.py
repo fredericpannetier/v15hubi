@@ -72,7 +72,7 @@ class Wizard_productprice(models.TransientModel):
                 price = self.env['product.pricelist.item'].create(price_vals)
                 product_count = product_count + 1
         
-        view_id = self.env["ir.model.data"].get_object_reference("hubi", "wiz_create_productprice_step2")
+        view_id = self.env["ir.model.data"].check_object_reference("hubi", "wiz_create_productprice_step2", True)
         self.message = ("%s %s %s %s %s %s %s") % ("Create Price OK  for category = (",self.category_id.id, ") ", self.category_id.complete_name, " for ", product_count, " lines")
         return {"type":"ir.actions.act_window",
                 "view_mode":"form",

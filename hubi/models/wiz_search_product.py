@@ -54,7 +54,7 @@ class WizSearchProduct(models.TransientModel):
 
         self.env.cr.commit()
        
-        view_id = self.env["ir.model.data"].get_object_reference("hubi", "search_product_wizard_form_step2")
+        view_id = self.env["ir.model.data"].check_object_reference("hubi", "search_product_wizard_form_step2", True)
         #view_id = self.env["ir.model.data"].get_object_reference("hubi", "Price_List_Lines_form_view")
         self.message = ("%s %s %s %s %s %s") % ("Create Product for price list = (",self.pricelist_id, ") ", p.pricelist_id.name, " * ",self.id)
         return {"type":"ir.actions.act_window",

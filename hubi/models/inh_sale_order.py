@@ -252,13 +252,13 @@ class HubiSaleOrder(models.Model):
         
         #This function opens a window to create  products depending on the pricelist
         try:
-            search_product_form_id = ir_model_data.get_object_reference('hubi', 'Price_List_Lines_form_view')[1]
+            search_product_form_id = ir_model_data.check_object_reference('hubi', 'Price_List_Lines_form_view', True)[1]
             
         except ValueError:
             search_product_form_id = False
             
         try:
-            search_view_id = ir_model_data.get_object_reference('hubi', 'Price_List_Lines_search')[1]
+            search_view_id = ir_model_data.check_object_reference('hubi', 'Price_List_Lines_search', True)[1]
             
         except ValueError:
             search_view_id = False
@@ -611,7 +611,7 @@ class HubiSaleOrder(models.Model):
             su_id_current = self.env['res.partner'].browse(current_uid)
             
             su_id = self.env['res.partner'].browse(SUPERUSER_ID)
-            template_id = self.env['ir.model.data'].get_object_reference('hubi',  'email_template_sale_order')[1]
+            template_id = self.env['ir.model.data'].check_object_reference('hubi',  'email_template_sale_order', True)[1]
             template_browse = self.env['mail.template'].browse(template_id)
             #email_to = self.env['res.partner'].browse(ligne.partner_id).email
             

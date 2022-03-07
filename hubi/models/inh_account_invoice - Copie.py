@@ -265,7 +265,7 @@ class HubiAccountInvoice(models.Model):
         #    raise UserError(_("Cannot send email: partner %s has no email address.") % ligne.partner_id.name)
         if email_to:
             su_id = self.env['res.partner'].browse(SUPERUSER_ID)
-            template_id = self.env['ir.model.data'].get_object_reference('hubi', 'email_template_invoice')[1]
+            template_id = self.env['ir.model.data'].check_object_reference('hubi', 'email_template_invoice', True)[1]
             template_browse = self.env['mail.template'].browse(template_id)
             # email_to = self.env['res.partner'].browse(ligne.partner_id).email
 
