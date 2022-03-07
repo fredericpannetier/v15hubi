@@ -58,7 +58,7 @@
 		<field name="view_id" ref="wiz_create_productprice_step1"/>
 		<field name="target">new</field>
 		<field name="binding_model_id" ref="product.list0"/>
-		<field name="binding_views_types">form</field>
+		<field name="binding_view_types">form</field>
 	</record>
 	<record model="ir.actions.act_window" id="test_action">
 		<field name="name">A Test Action</field>
