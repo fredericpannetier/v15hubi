@@ -56,13 +56,13 @@ class ResConfigSettings(models.TransientModel):
     def open_type_pallet(self):
         self.ensure_one()
         try:
-            pallet_type_form_id = self.env['ir.model.data'].get_object_reference('palletization', 'view_pallet_type_form')[1]
+            pallet_type_form_id = self.env['ir.model.data'].check_object_reference('palletization', 'view_pallet_type_form', True)[1]
             
         except ValueError:
             pallet_type_form_id = False
         
         try:
-            pallet_type_tree_id = self.env['ir.model.data'].get_object_reference('palletization', 'view_pallet_type_tree')[1]
+            pallet_type_tree_id = self.env['ir.model.data'].check_object_reference('palletization', 'view_pallet_type_tree', True)[1]
             
         except ValueError:
             pallet_type_tree_id = False    

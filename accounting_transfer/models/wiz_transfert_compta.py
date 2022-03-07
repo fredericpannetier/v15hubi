@@ -162,11 +162,11 @@ class Wizard_transfert_compta(models.TransientModel):
         
         ir_model_data = self.env['ir.model.data']
         try:
-            template_id = ir_model_data.get_object_reference('accounting_transfer', 'email_template_accounting_transfer')[1]
+            template_id = ir_model_data.check_object_reference('accounting_transfer', 'email_template_accounting_transfer', True)[1]
         except ValueError:
             template_id = False
         try:
-            compose_form_id = ir_model_data.get_object_reference('mail', 'email_compose_message_wizard_form')[1]
+            compose_form_id = ir_model_data.check_object_reference('mail', 'email_compose_message_wizard_form', True)[1]
         except ValueError:
             compose_form_id = False
         #'attachment_ids':  [(4,id.id)],    
@@ -1327,11 +1327,11 @@ class Wizard_transfert_compta(models.TransientModel):
         
                 ir_model_data = self.env['ir.model.data']
                 try:
-                    template_id = ir_model_data.get_object_reference('accounting_transfer', 'email_template_accounting_transfer')[1]
+                    template_id = ir_model_data.check_object_reference('accounting_transfer', 'email_template_accounting_transfer', True)[1]
                 except ValueError:
                     template_id = False
                 try:
-                    compose_form_id = ir_model_data.get_object_reference('mail', 'email_compose_message_wizard_form')[1]
+                    compose_form_id = ir_model_data.check_object_reference('mail', 'email_compose_message_wizard_form', True)[1]
                 except ValueError:
                     compose_form_id = False
 
@@ -1358,7 +1358,7 @@ class Wizard_transfert_compta(models.TransientModel):
             else:
                 #téléchargement du fichier
                 """
-                view_id = self.env["ir.model.data"].get_object_reference("accounting_transfer", "wiz_transfert_compta_step2")
+                view_id = self.env["ir.model.data"].check_object_reference("accounting_transfer", "wiz_transfert_compta_step2", True)
                 self.message = ("%s %s %s %s") % ("Create Accounting transfer for ",nb_lig, " lines. Sur ", csv_path )
                 return {"type":"ir.actions.act_window",
                     "view_mode":"form",

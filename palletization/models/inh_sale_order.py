@@ -369,7 +369,7 @@ class DiSaleOrderPalletization(models.Model):
         self.create_pallet_sale()
         
         self.ensure_one()
-        view_id = self.env["ir.model.data"].get_object_reference("palletization", "di_palletization_form")
+        view_id = self.env["ir.model.data"].check_object_reference("palletization", "di_palletization_form", True)
         
         action = self.env.ref('palletization.action_di_palletization').read()[0]
         ##action['views'] = [(self.env.ref('palletization.di_palletization_form').id, 'form')]
