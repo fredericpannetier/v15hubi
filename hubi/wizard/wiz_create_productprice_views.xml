@@ -58,7 +58,7 @@
 		<field name="view_mode">form</field>
 		<field name="target">new</field>
 		<field name="binding_views">form</field>
-		<field name="view_id" ref="wiz_create_producprice_step1"/>
+		<field name="view_id" ref="wiz_create_productprice_step1"/>
 	</record>
 
 </odoo>
