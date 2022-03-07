@@ -71,7 +71,7 @@
         <field name="report_name">hubi.report_partner_list_address</field>
         <field name="report_file">hubi.report_partner_list_address</field>
         <field name="attachment_use">False</field>
-        <field name="paperformat">paperformat_hubi_lowmargin</field>
+        <field name="paperformat_id" ref="paperformat_hubi_lowmargin"/>
     </record>
 
     <record id="report_partner_sheet" model="ir.actions.report">
@@ -81,7 +81,7 @@
         <field name="report_name">hubi.report_partner_sheet_address</field>
         <field name="report_file">hubi.report_partner_sheet_address</field>
         <field name="attachment_use">False</field>
-        <field name="paperformat">paperformat_hubi_A4_euro</field>
+        <field name="paperformat_id" ref="paperformat_hubi_A4_euro"/>
     </record>
     
     <record id="report_productprice_sheet" model="ir.actions.report">
@@ -91,7 +91,7 @@
         <field name="report_name">hubi.report_product_sheet_price</field>
         <field name="report_file">hubi.report_product_sheet_price</field>
         <field name="attachment_use">False</field>
-        <field name="paperformat">paperformat_hubi_A3_euro</field>
+        <field name="paperformat_id" ref="paperformat_hubi_A3_euro"/>
     </record>
   
 <!-->
@@ -115,7 +115,7 @@
         <field name="report_name">hubi.report_sale_order_no_validate_hubi</field>
         <field name="report_file">hubi.report_sale_order_no_validate_hubi</field>
         <field name="print_report_name">(object.state in ('draft', 'sent') and 'Quotation - %s' % (object.name)) or 'Order - %s' % (object.name)</field>
-        <field name="paperformat">paperformat_hubi_A4_euro</field>
+        <field name="paperformat_id" ref="paperformat_hubi_A4_euro"/>
     </record>
     
     <record id="action_report_pro_forma_invoice_hubi" model="ir.actions.report">
@@ -125,7 +125,7 @@
         <field name="report_name">hubi.report_sale_order_pro_forma_hubi</field>
         <field name="report_file">hubi.report_sale_order_pro_forma_hubi</field>
         <field name="print_report_name">'PRO-FORMA - %s' % (object.name)</field>
-        <field name="paperformat">paperformat_hubi_A4_euro</field>
+        <field name="paperformat_id" ref="paperformat_hubi_A4_euro"/>
     </record>
  
  
@@ -136,7 +136,7 @@
         <field name="report_name">hubi.report_account_invoice_summary</field>
         <field name="report_file">hubi.report_account_invoice_summary</field>
         <field name="attachment_use">False</field>
-        <field name="paperformat">paperformat_hubi_A4_euro</field>
+        <field name="paperformat_id" ref="paperformat_hubi_A4_euro"/>
     </record>
  
   <!-->
@@ -173,7 +173,7 @@
         <field name="report_name">hubi.report_carrier_delivery_slip</field>
         <field name="report_file">hubi.report_carrier_delivery_slip</field>
         <field name="attachment_use">False</field>
-        <field name="paperformat">paperformat_hubi_lowmargin</field>
+        <field name="paperformat_id" ref="paperformat_hubi_lowmargin"/>
     </record>
     
 
