@@ -84,7 +84,7 @@
         <menuitem id="menu_hubi_datas" name="Datas" sequence="80" parent="menu_hubi" />
     -->    
             <menuitem id="menu_hubi_shippers" name="Carrier" sequence="10" parent="hubi_menu.menu_hubi_datas" action="delivery.action_delivery_carrier_form" />
-            <!-- menuitem id="menu_hubi_sales_team" name="Sales Team" sequence="10" parent="hubi_menu.menu_hubi_datas" action="sales_team.sales_team_config_action" / -->
+            <menuitem id="menu_hubi_sales_team" name="Sales Team" sequence="10" parent="hubi_menu.menu_hubi_datas" action="sales_team.crm_team_action_config" />
     <!-->
             <menuitem id="menu_hubi_datas_location" name="Locations" sequence="20" parent="menu_hubi_datas" />
     -->        
