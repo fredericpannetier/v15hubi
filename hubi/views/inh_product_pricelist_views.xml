@@ -23,7 +23,7 @@
             </field>
         </record>
         
-        <record id="action_wiz_create_productprice2" model="ir.actions.act_window">
+        <!-- record id="action_wiz_create_productprice2" model="ir.actions.act_window">
             <field name="name">Create Price</field>
             <field name="res_model">wiz.productprice</field>
             <field name="view_mode">form</field>
@@ -31,7 +31,7 @@
             <field name="binding_model_id" ref="product.list0"/>
             <field name="binding_view_types">form</field>
             <field name="target">new</field>
-        </record>
+        </record -->
         
         <record id="pricelist_hubi_form_view" model="ir.ui.view">
             <field name="name">pricelist.hubi.form</field>

@@ -51,14 +51,15 @@
 		</field>
 	</record>
 
-	<record id="action_wiz_create_productprice" model="ir.actions.act_window">
-		<field name="name">Create Price</field>
-		<field name="res_model">wiz.productprice</field>
-		<field name="view_mode">form</field>
-		<field name="view_id" ref="wiz_create_productprice_step1"/>
-		<field name="target">new</field>
-		<field name="binding_model_id" ref="product.list0"/>
-		<field name="binding_view_types">form</field>
-	</record>
+	<record model="ir.actions.act_window" id="action_wiz_create_productprice">
+        <field name="name">Create price</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz.productprice</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wiz_create_productprice_step1"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_product_pricelist"/> 
+        <field name="binding_view_types">form</field>
+    </record>
 
 </odoo>
