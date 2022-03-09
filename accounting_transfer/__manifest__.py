@@ -8,13 +8,14 @@
     
     'summary': 'Accounting Transfer',
     'depends': [
-        'base','base_setup','sale', 'account_payment_partner', 'tools'
+        'base','base_setup','sale', 'account_payment_partner', 'account_payment_mode', 'tools'
     ],
     'data': ['data/template_email.xml',
              'data/account_default_settings.xml',
         'views/inh_parameter_config_views.xml',
         'views/inh_partner_views.xml',
         'views/inh_account_move_views.xml',
+        'views/inh_account_payment_mode.xml',
         #'wizard/wiz_accounting_parameter_views.xml',
         'wizard/wiz_transfert_compta_views.xml',
         'accounting_transfer_menu.xml',
