@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="email_template_accounting_transfer" model="mail.template">
+		<field name="name">Accounting_transfer</field>
+		<field name="email_from">${user.email}</field>
+		<field name="subject">Vos fichiers comptables</field>
+		<field name="model">wiz.accountingtransfer</field>
+		<field name="body_html"><![CDATA[
+<p>Dear,
+You have been invited to transfer your writting from  ${object.date_start.strftime('%d/%m/%Y')} to  ${object.date_end.strftime('%d/%m/%Y')}
+ in your accounting.
+<br/>
+Best regards,
+<br/>
+${object.create_uid.signature | safe}
+</p>
+]]></field>
+	</record>
+
+ 
+    
+
+
+</odoo>

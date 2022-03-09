@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+  <!-->  
+    <record id="view_miadi_accounting_parameter_tree" model="ir.ui.view" >
+            <field name="name">miadi_accounting.parameter.tree</field>
+            <field name="priority" eval="1"/>
+            <field name="model">di.accounting.parameter</field>        
+            <field name="arch" type="xml">
+                <tree string="Account parameter" default_order="name"  import="false" create="true">
+                    <field name="name"/>
+                    <field name="company_id"/>
+                    <field name="auxiliary_accounting"/>
+                    
+                </tree>
+            </field>
+    </record>
+
+
+    <record id="miadi_accounting_parameter_form" model="ir.ui.view">
+        <field name="name">miadi_accountingparameter_form</field>
+        <field name="model">di.accounting.parameter</field>
+        <field name="arch" type="xml">
+            <form string="Parameters">
+            <header>                </header>
+                <sheet>
+                    <div class="oe_title" name="label_0001">
+                        <H1>
+                            <field name="name" default_focus="1" placeholder="Name"/>                             
+                        </H1>
+                    </div>
+                </sheet>    
+            </form>
+        </field>
+    </record>
+ -->
+ 
+    <record id="wiz_accounting_parameter_form" model="ir.ui.view">
+        <field name="name">wiz_accountingparameter_form</field>
+        <field name="model">wiz.accounting.parameter</field>
+        <field name="arch" type="xml">
+            <form string="General Settings">
+            
+                <div class="oe_title">
+                        <H1>
+                            <field name="name" placeholder="Name" readonly="1"/>  
+                            <separator/>                           
+                            <field name="company_id" readonly="1"/>                             
+                        </H1>
+                </div> 
+                <separator string="Auxiliary Accounting"/>
+                <group>
+                    <group>
+                        <field name="auxiliary_accounting"/>
+                        <field name="root_account_auxiliary_customer"/>
+                        <field name="root_account_auxiliary_supplier"/>
+                    </group>
+                    
+                </group>
+                
+                <separator string="Accounting"/>
+                <group>
+                    <group>
+                        <field name="length_account_auxiliary"/>
+                        <field name="length_account_general"/>
+                    </group>
+                    <group>
+                        <field name="complete_0_account_auxiliary"/>
+                        <field name="complete_0_account_general"/>
+                    </group>
+                </group>
+                
+                <separator string="Account Transfer"/>
+                <group>
+                    <group>
+                        <field name="type_accounting"/>
+                        <field name="path_account_transfer" invisible="1"/>
+                        <field name="account_file_transfer"/>
+                        <field name="writing_file_transfer"/>
+                        <field name="mail_accounting"/>
+                    </group>
+                </group>
+
+<!-->
+                <separator string="Various"/>
+                <group>
+                    <group>
+                        <field name="calcul_lot"/>
+                    </group>
+                </group>
+-->
+                
+                <footer>
+                    <button string="Validation" type="object" name="execute_update"
+                        default_focus="1"  class="btn btn-primary"/>
+                    <button string="Cancel" class="btn btn-default" special="cancel" />
+                </footer>
+            
+            </form>
+        </field>
+    </record>
+ 
+    <record id="action_accounting_parameter" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz.accounting.parameter</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wiz_accounting_parameter_form"/>
+        <field name="target">inline</field>
+    </record>
+
+   
+    
+    </data>
+ 
+</odoo>
