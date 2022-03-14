@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu TRACABILITE -->
+    <menuitem id="menu_hubi_tracabilite" name="TRACABILITE" sequence="87" parent="hubi_menu.menu_hubi" />
+      <!-->
+        <menuitem id="menu_hubi_regroup_calibr" name="Regrouping-Calibration" sequence="10" parent="menu_hubi_tracabilite" action="hubi_tracabilite.action_tracabilite_transfert"  />
+      -->  
+        <menuitem id="menu_hubi_regroup_calibr" name="Regrouping-Calibration" sequence="10" parent="menu_hubi_tracabilite" action="hubi_tracabilite.action_tracabilite_transfert"  />
+
+    <menuitem id="menu_hubi_tracabilite_data" name="DATAS" sequence="20" parent="menu_hubi_tracabilite" />
+        <menuitem id="menu_hubi_warehouse" name="Warehouses" sequence="10" parent="menu_hubi_tracabilite_data" action="stock.action_warehouse_form" />
+        <menuitem id="menu_hubi_location" name="Locations" sequence="15" parent="menu_hubi_tracabilite_data" action="stock.action_location_form" />
+
+        <menuitem id="menu_hubi_lots_serial_numbers" name="Lots Serial numbers" sequence="20" parent="menu_hubi_tracabilite_data" action="stock.action_production_lot_form" />
+        <menuitem id="menu_hubi_lots_operation_type" name="Operation Type" sequence="30" parent="menu_hubi_tracabilite_data" action="stock.action_picking_type_list" />
+        <menuitem id="menu_hubi_lots_route" name="Route" sequence="40" parent="menu_hubi_tracabilite_data" action="stock.action_routes_form" />
+                
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="di_location_form_view" model="ir.ui.view">
+        <field name="name">hubi.location.form</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+          
+            <xpath expr="//field[@name='return_location']" position="after">
+                <field name="di_storage"/>
+            </xpath>
+            
+        </field>
+    </record>
+ 
+    <record id="di_warehouse_form_view" model="ir.ui.view">
+        <field name="name">hubi.warehouse.form</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+          
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="view_location_id"/>
+                <field name="lot_stock_id"/>
+            </xpath>
+            
+        </field>
+    </record>
+    
+  
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="wiz_tracabilite_step1" model="ir.ui.view">
+		<field name="name">wiz.tracabilite.form1</field>
+		<field name="model">wiz.hubi.tracabilite</field>
+		<field name="arch" type="xml">
+		
+			<form string="Regrouping - Calibration">
+			    <sheet>
+			        <group>
+			            
+			            <h2>
+			            <field name="type_picking" string="Choice"/>
+			            </h2>
+
+                        <field name="picking_id" invisible="1"/>
+                        <field name="picking_type_id" invisible="1"/>
+                        <field name="move_id" invisible="1"/>			            
+        			    <field name="company_id" invisible="0"/>
+        			    
+        			    <field name="product_id" string="Product" attrs="{'readonly': [('type_picking', '=', 'Calibration')]}"/>
+        			    
+        			    <field name="qty_pack" string="Quantity Pack"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+        			    <field name="stock_packaging" string="Packaging"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+        			    
+			            <field name="product_qty" string="Quantity"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+                        <field name="product_uom"  options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+                        <field name="lot_id" string="Lot" context="{'default_product_id': product_id,  'default_company_id': company_id}" attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+                        
+                        <field name="location_id" string="Location Origin" 
+                                domain="['|',('id', '=',  context.get('default_location_id', [])), ('location_id', '=',  context.get('default_location_id', []))]" 
+                                attrs="{'readonly': [('type_picking', '=', 'Calibration')] , 'invisible': [('type_picking', '=', 'Regrouping')] }" />
+                        <field name="location_dest_id" string="Location Dest"  
+                                domain="['|',('id', '=',  context.get('default_location_dest_id', [])), ('location_id', '=',  context.get('default_location_dest_id', []))]" 
+                                attrs="{'invisible': [('type_picking', '=', 'Calibration')]}" />
+                        
+                        <field name="location_first" string="First Location"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+                        <field name="location_last" string="Last Location"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+                        
+                        <field name="description_picking" string="Description"  attrs="{'readonly': [('type_picking', '=', 'Calibration')]}" />
+        			</group>
+        			<group>
+                        <field name="product_id_scrap" string="Scrap : Product" />
+                        <field name="location_id_scrap" string="Scrap : Location Origin" 
+                        domain="['|',('id', '=',  context.get('default_location_id_scrap', [])), ('location_id', '=',  context.get('default_location_id_scrap', []))]" />
+                        <field name="location_dest_id_scrap" string="Scrap : Location Dest" />
+                        <field name="lot_id_scrap" string="Scrap : Lot" context="{'default_product_id': product_id_scrap,  'default_company_id': company_id}"/>
+                        <field name="product_qty_scrap" String="Scrap : Quantity" />
+        			    
+        			    
+                    </group>
+                    
+                    <group>
+                        <field name="line_ids" mode="tree" string="Lines for the calibration"  attrs="{'invisible': [('type_picking', '=', 'Regrouping')]}"
+                            context="{ 'default_location_id':  context.get('default_location_id_scrap', []), 'default_location_dest_id':  context.get('default_location_dest_id_scrap', [])}">
+                               
+                        >
+                            <tree  string="Calibration" editable="bottom">
+                                <field name="company_id" invisible="1"/>
+                                <field name="product_id" string="Product"/>
+                                
+                                <field name="qty_pack" string="Quantity Pack" />
+                                <field name="stock_packaging" string="Packaging" />
+                        
+                                <field name="product_qty" string="Quantity"/>
+                                <field name="product_uom"  options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom"/>
+                                <field name="lot_id" string="Lot" />
+                                <field name="description_picking" string="Description"  optional="hide"/>
+                                
+                                <field name="location_dest_id" string="Location"  domain="['|',('id', '=',  context.get('default_location_id', [])), ('location_id', '=',  context.get('default_location_id', []))]"   />
+                                <field name="location_first" string="First" />
+                                <field name="location_last" string="Last" />
+                        
+                            </tree> 
+                        </field>    
+                    </group>
+    
+        
+        		  	<footer>
+        				<button string="Regrouping" type="object" name="tracabilite_regrouping"	default_focus="1" class="oe_link"  attrs="{'invisible': [('type_picking', '=', 'Calibration')]}"/>
+                        <button string="Calibration" type="object" name="tracabilite_calibration" default_focus="1" class="oe_link"  attrs="{'invisible': [('type_picking', '=', 'Regrouping')]}"/>
+        				<button string="Cancel" class="oe_link" special="cancel" />
+        			</footer>
+			
+    			</sheet>
+			</form>
+			
+		</field>
+	</record>
+
+
+
+</odoo>

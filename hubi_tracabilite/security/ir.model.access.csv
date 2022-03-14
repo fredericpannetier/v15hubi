@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_wiz_hubi_tracabilite,wiz_hubi_tracabilite_group_user,model_wiz_hubi_tracabilite,base.group_user,1,1,1,1
+access_wiz_hubi_tracabilite_line,wiz_hubi_tracabilite_line_group_user,model_wiz_hubi_tracabilite_line,base.group_user,1,1,1,1
+access_stock_quant_manager,stock_quant_manager,stock.model_stock_quant,stock.group_stock_manager,1,1,0,0
+access_stock_quant_user,stock_quant_user,stock.model_stock_quant,stock.group_stock_user,1,1,1,1
+access_stock_quant_all,stock_quant_all_users,stock.model_stock_quant,base.group_user,1,1,1,1
+access_stock_scrap_user,stock_scrap_user,stock.model_stock_scrap,stock.group_stock_user,1,1,1,1
+access_stock_scrap_all,stock_scrap_all_users,stock.model_stock_scrap,base.group_user,1,1,1,1
