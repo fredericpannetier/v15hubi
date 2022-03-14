@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
-    <menuitem id="menu_hubi" name="Hubi" sequence="200" web_icon="hubi_menu,static/description/iconhubi.png"/>
+    <menuitem id="menu_hubi" name="Hubi" sequence="200" web_icon="hubi_menu,static/description/icon.png"/>
 
         <menuitem id="menu_hubi_sales" name="Sales" sequence="10" parent="menu_hubi" />
 			<menuitem id="menu_hubi_sales_documents" name="Documents" parent="menu_hubi_sales" sequence="1"/>
@@ -13,7 +13,7 @@
                 <menuitem id="menu_hubi_packing_preparation" sequence="50" parent="menu_hubi_sales_documents" action="hubi.action_hubi_packing_preparation"  />
                 -->
 			<menuitem id="menu_hubi_sales_reports" name="Reports" parent="menu_hubi_sales" sequence="2"/>
-				<menuitem id="menu_hubi_sale_analysis_report" name="Sale Order Analysis" sequence="10" parent="menu_hubi_sales_reports" />
+				<!-- menuitem id="menu_hubi_sale_analysis_report" name="Sale Order Analysis" sequence="10" parent="menu_hubi_sales_reports" / -->
 					<!-->
 					<menuitem id="menu_hubi_sale_order_report_price" name="Analysis Price" sequence="10" parent="menu_hubi_sale_analysis_report" action="sale.action_order_report_all"  />
 					<menuitem id="menu_hubi_sale_order_report_daily" name="Summary Daily" sequence="20" parent="menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_daily"  />

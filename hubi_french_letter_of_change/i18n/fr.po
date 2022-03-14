@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hubi_french_letter_of_change
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 09:52+0000\n"
+"PO-Revision-Date: 2021-04-29 09:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.lcr_bank_payment_line_menu
+msgid "Bank Payment Lines"
+msgstr "Lignes de paiement bancaire"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.lcr_payment_order_inbound_menu
+msgid "Debit Orders"
+msgstr "Ordres de débit"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.menu_hubi_lcr
+msgid "French letter of change"
+msgstr "Lettre de change Français"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.lcr_payment_method_menu
+msgid "Payment Methods"
+msgstr "Méthodes de paiement"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.lcr_payment_mode_menu
+msgid "Payment Modes"
+msgstr "Modes de paiement"
+
+#. module: hubi_french_letter_of_change
+#: model:ir.ui.menu,name:hubi_french_letter_of_change.lcr_payment_order_outbound_menu
+msgid "Payment Orders"
+msgstr "Ordres de paiement"

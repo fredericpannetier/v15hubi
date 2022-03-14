@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>	
+    <!-- ***Menu french letter of change -->
+    <menuitem id="menu_hubi_lcr" name="French letter of change" sequence="92" parent="hubi_menu.menu_hubi" />
+        <menuitem id="lcr_payment_mode_menu" action="account_payment_mode.account_payment_mode_action"  parent="menu_hubi_lcr"  sequence="10"   />
+        <menuitem id="lcr_payment_method_menu"  action="account_payment_mode.account_payment_method_action"  parent="menu_hubi_lcr"   sequence="20"    />
+        
+        <menuitem id="lcr_payment_order_outbound_menu" action="account_payment_order.account_payment_order_outbound_action"  parent="menu_hubi_lcr"  sequence="30"    />
+        <menuitem id="lcr_payment_order_inbound_menu"  action="account_payment_order.account_payment_order_inbound_action"   parent="menu_hubi_lcr" sequence="40"  />
+        
+        <menuitem id="lcr_bank_payment_line_menu" action="account_payment_order.bank_payment_line_action" parent="menu_hubi_lcr" sequence="50"  groups="account_payment_order.group_account_payment" />
+                   
+</odoo>
