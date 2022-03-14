@@ -37,7 +37,7 @@
                         <t t-set="customer_info" t-value="carrier.partner_id"/>
                         <t t-set="saleorder_info" t-value="carrier.orderid"/>
                         
-                        <tr t-if="(carrier.carrier_name != carrier_rupture and carrier_rupture != zzzzz) or (carrier_last)" >
+                        <tr t-if="(carrier.carrier_name != carrier_rupture and carrier_rupture != zzzzz)" >
                             <td colspan="4">
                                 <strong>
                                     <p>

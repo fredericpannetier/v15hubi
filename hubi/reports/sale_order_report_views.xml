@@ -228,6 +228,19 @@
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('view_hubi_saleorder_report_daily_tree')})]"/>
         <field name="help">This report performs analysis on your quotations and sales orders. Analysis check your sales revenues and sort it by different group criteria (salesman, partner, product, etc.) Use this report to perform analysis on sales not having invoiced yet. If you want to analyse your turnover, you should use the Invoice Analysis report in the Accounting application.</field>
     </record> 
+	
+	<!--
+	<record model="ir.actions.act_window" id="action_wiz_create_productprice">
+        <field name="name">Create price</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wiz.productprice</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wiz_create_productprice_step1"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_product_pricelist"/> 
+        <field name="binding_view_types">form</field>
+    </record>
+	-->
     
     <record id="action_hubi_saleorder_report_delivery" model="ir.actions.act_window">
         <field name="name">Analysis Summary Delivery</field>

@@ -17,12 +17,12 @@
 			<menuitem id="menu_hubi_sales_reports" name="Reports" parent="menu_hubi_sales" sequence="2"/>
 				<menuitem id="menu_hubi_sale_analysis_report" name="Sale Order Analysis" sequence="10" parent="menu_hubi_sales_reports" />
 	-->			
-					<menuitem id="menu_hubi_sale_order_report_price" name="Analysis Price" sequence="10" parent="hubi_menu.menu_hubi_sale_analysis_report" action="sale.action_order_report_all"  />
-					<menuitem id="menu_hubi_sale_order_report_daily" name="Summary Daily" sequence="20" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_daily"  />
-					<menuitem id="menu_hubi_sale_order_report_delivery" name="Summary Delivery" sequence="30" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_delivery"  />
-					<menuitem id="menu_hubi_sale_order_report_weight" name="Summary Weight" sequence="40" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_weight"  />
-					<menuitem id="menu_hubi_sale_order_report_carrier" name="Summary Carrier" sequence="50" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_carrier"  />
-					<menuitem id="menu_hubi_sale_order_report_reference" name="Summary Invoice Order" sequence="60" parent="hubi_menu.menu_hubi_sale_analysis_report" action="hubi.action_hubi_saleorder_report_reference"  />
+					<menuitem id="menu_hubi_sale_order_report_price" name="Analysis Price" sequence="10" parent="hubi_menu.menu_hubi_sales_reports" action="sale.action_order_report_all"  />
+					<menuitem id="menu_hubi_sale_order_report_daily" name="Summary Daily" sequence="20" parent="hubi_menu.menu_hubi_sales_reports" action="hubi.action_hubi_saleorder_report_daily"  />
+					<menuitem id="menu_hubi_sale_order_report_delivery" name="Summary Delivery" sequence="30" parent="hubi_menu.menu_hubi_sales_reports" action="hubi.action_hubi_saleorder_report_delivery"  />
+					<menuitem id="menu_hubi_sale_order_report_weight" name="Summary Weight" sequence="40" parent="hubi_menu.menu_hubi_sales_reports" action="hubi.action_hubi_saleorder_report_weight"  />
+					<menuitem id="menu_hubi_sale_order_report_carrier" name="Summary Carrier" sequence="50" parent="hubi_menu.menu_hubi_sales_reports" action="hubi.action_hubi_saleorder_report_carrier"  />
+					<menuitem id="menu_hubi_sale_order_report_reference" name="Summary Invoice Order" sequence="60" parent="hubi_menu.menu_hubi_sales_reports" action="hubi.action_hubi_saleorder_report_reference"  />
 				<!-- V14 menuitem id="menu_hubi_sale_team_report" sequence="20" parent="hubi_menu.menu_hubi_sales_reports" action="sales_team.crm_team_salesteams_act"  / -->
 				<menuitem id="menu_hubi_sale_team_report" sequence="20" parent="hubi_menu.menu_hubi_sales_reports" action="sales_team.crm_team_action_sales" />
 				
@@ -50,10 +50,10 @@
 			<menuitem id="menu_hubi_report_billing" name="Report Billing" sequence="30" parent="menu_hubi_billing" />
 				<menuitem id="menu_hubi_invoice_report" name="Invoice Analysis" sequence="20" parent="menu_hubi_report_billing" />
 -->
-					<menuitem id="menu_hubi_invoice_report_price" name="Analysis Price" sequence="10" parent="hubi_menu.menu_hubi_invoice_report" action="account.action_account_invoice_report_all"  />
-					<menuitem id="menu_hubi_invoice_report_weight" name="Analysis Weight" sequence="20" parent="hubi_menu.menu_hubi_invoice_report" action="hubi.action_hubi_invoice_report_weight"  />
-					<menuitem id="menu_hubi_invoice_report_detail" name="Analysis Detail" sequence="30" parent="hubi_menu.menu_hubi_invoice_report" action="hubi.action_hubi_invoice_report_detail"  />
-					<menuitem id="menu_hubi_invoice_report_free" name="Analysis free Product" sequence="40" parent="hubi_menu.menu_hubi_invoice_report" action="hubi.action_hubi_invoice_report_free"  />
+					<menuitem id="menu_hubi_invoice_report_price" name="Analysis Price" sequence="10" parent="hubi_menu.menu_hubi_report_billing" action="account.action_account_invoice_report_all"  />
+					<menuitem id="menu_hubi_invoice_report_weight" name="Analysis Weight" sequence="20" parent="hubi_menu.menu_hubi_report_billing" action="hubi.action_hubi_invoice_report_weight"  />
+					<menuitem id="menu_hubi_invoice_report_detail" name="Analysis Detail" sequence="30" parent="hubi_menu.menu_hubi_report_billing" action="hubi.action_hubi_invoice_report_detail"  />
+					<menuitem id="menu_hubi_invoice_report_free" name="Analysis free Product" sequence="40" parent="hubi_menu.menu_hubi_report_billing" action="hubi.action_hubi_invoice_report_free"  />
 
  
 <!-->

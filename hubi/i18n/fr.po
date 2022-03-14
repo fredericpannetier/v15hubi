@@ -704,7 +704,7 @@ msgstr "Catégorie Unité"
 #. module: hubi
 #: model_terms:ir.ui.view,arch_db:hubi.view_partner_customer
 msgid "Characteristic"
-msgstr "Caractèristique"
+msgstr "Caractéristique"
 
 #. module: hubi
 #: model:ir.model.fields,field_description:hubi.field_delivery_carrier__di_city
