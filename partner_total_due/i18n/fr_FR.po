@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_total_due
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20210211\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-01 14:10+0000\n"
+"PO-Revision-Date: 2022-03-01 14:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_total_due
+#: model_terms:ir.ui.view,arch_db:partner_total_due.res_partner_view_form
+msgid "<span class=\"o_stat_text\">Total Due</span>"
+msgstr ""
+
+#. module: partner_total_due
+#: model:ir.model,name:partner_total_due.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner__residual_aml_ids
+#: model:ir.model.fields,field_description:partner_total_due.field_res_users__residual_aml_ids
+msgid "Residual Aml"
+msgstr ""
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner__di_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_users__di_total_due
+msgid "Total Due"
+msgstr "Total Dû"
+
+#. module: partner_total_due
+#: model:ir.model.fields,field_description:partner_total_due.field_res_partner__di_total_overdue
+#: model:ir.model.fields,field_description:partner_total_due.field_res_users__di_total_overdue
+msgid "Total Overdue"
+msgstr "Total en retard"
