@@ -9,8 +9,7 @@
                     <field name="name"/>
                     <field name="code"/>
                     <field name="realname"/>
-                    <field name="adressip"/>
-                    <field name="port"/>
+                    <field name="commentary"/>
                     <field name="isimpetiq"/>
                 </tree>
             </field>
@@ -33,8 +32,8 @@
                         <group name="printer_0003">
                             <field name="code"/>
                             <field name="realname"/>
-                            <field name="adressip"/>
-                            <field name="port"/>
+                            <field name="specific_param"/>
+                            <field name="commentary"/>
                             <field name="isimpetiq"/>
                         </group>
                     </group>

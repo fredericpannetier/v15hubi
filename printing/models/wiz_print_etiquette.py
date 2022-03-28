@@ -16,12 +16,13 @@ class wizard_printetiquette(models.TransientModel):
 
     def print_etiquette(self):
         printerName = self.printer_id.name
+        langage_print = self.printer_id.langage_print
         etiquetteFile = self.etiquette_id.text_etiq 
         
         test = [("key1","value1"),("key2","value2"),("key3","value3"),("saleline_qty",1)]
         
         #ctrl_print.printetiquetteonwindows(self, printerName,etiquetteFile,'[',test)
         #ctrl_print.PrintingLabel.printetiquetteonwindows(self, printerName,etiquetteFile,'[',test)
-        self.env['di.printing.printing'].printetiquetteonwindows( printerName,etiquetteFile,'[',test)
+        self.env['di.printing.printing'].printetiquetteonwindows( printerName,etiquetteFile,'[',']',langage_print,test)
         return {'type': 'ir.actions.act_window_close'}  
  

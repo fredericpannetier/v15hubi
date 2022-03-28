@@ -13,6 +13,7 @@ class MIADI_EtiquettePrinter(models.Model):
     adressip = fields.Char(string="IP Address")
     port = fields.Integer(string="Port")
     commentary = fields.Text(string="Comment")
+    specific_param = fields.Char(string="Specific parameter to configure printer")
     isimpetiq = fields.Boolean(string="Etiquette printer",default=False,help="Checked = etiquette printer, Unchecked = normal printer")
     
     _sql_constraints = [("uniq_id","unique(code)","A printer already exists with this code. It must be unique !"),]
