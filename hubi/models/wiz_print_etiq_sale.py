@@ -19,8 +19,9 @@ class wizard_printlabelsale(models.TransientModel):
         #printerName = "\\\\" + self.printer_id.adressIp + "\\" + self.printer_id.realName
         #labelFile = self.model_id.file
         printerName = self.printer_id.name
+        langage_print = self.printer_id.langage_print
         labelFile = self.model_id.text 
         informations = [("key1","value1"),("key2","value2"),("key3","value3"),("saleline_qty",1)]
         #ctrl_print.printetiqonwindows(printerName,labelFile,'[',informations)
-        self.env['di.printing.printing'].printetiquetteonwindows(printer,labelFile,'[',informations)
+        self.env['di.printing.printing'].printetiquetteonwindows(printer,labelFile,'[',']',langage_print,informations)
         return {'type': 'ir.actions.act_window_close'}  

@@ -68,7 +68,7 @@ def prepareprintetiq(self, nom_table, id_table):
                     hfc.name, hfp.name, pt.di_etiq_mention, 
                     sl.code_barre, sl.code_128, sl.qte,  
                     case sl.qte when 0 then sl.pds else sl.pds/sl.qte end,
-                    sl.nb_mini, p.realname, p.adressip, l.text_etiq,
+                    sl.nb_mini, p.realname, p.adressip, p.specific_param, l.langage_print, l.text_etiq,
                     t.di_customer_name_etiq, t.di_customer_city_etiq, 
                     etab.di_health_number, etab.di_company_name_etiq, etab.di_company_city_etiq, etab.di_etiq_mention,
                     sl.numlot, sl.color_etiq, pt.di_etiq_latin, pt.di_etiq_spanish, pt.name, 
@@ -102,11 +102,11 @@ def prepareprintetiq(self, nom_table, id_table):
                     r[11], r[12], r[13], r[14], r[15], r[16], r[17], r[18], r[19], r[20], \
                     r[21], r[22], r[23], r[24], r[25], r[26], r[27], r[28], r[29], r[30], \
                     r[31], r[32], r[33], r[34], r[35], r[36], r[37], r[38], r[39], r[40], \
-                    r[41], r[42], r[43], r[44], r[45]) \
+                    r[41], r[42], r[43], r[44], r[45], r[46], r[47]) \
                   for r in self.env.cr.fetchall()]
         
         for packaging_date,sending_date,product_description,category_name,caliber_name,packaging_name,etiq_mention,code_barre,code128,qte, pds, \
-        nb_mini,printerName,adressip,labelFile,clientname1,clientname2,numsanitaire,etabexp1,etabexp2,etab_mention,\
+        nb_mini,printerName,adressip, printer_param,langage_print,labelFile,clientname1,clientname2,numsanitaire,etabexp1,etabexp2,etab_mention,\
         lot,color,etiq_latin, etiq_spanish,product_name,with_ean128,compteur_ean128, etab_id, carrier_name, c_st1, \
         c_st2, c_st3, c_st4, c_st5, p_st1, p_st2, p_st3, p_st4, p_st5, etiq_english, etiq_italian, etiq_portuguese, \
         date_dluo, saleorder, saleorderline in result:
@@ -181,6 +181,8 @@ def prepareprintetiq(self, nom_table, id_table):
                 ("etab_health_number",numsanitaire),
                 ("etab_etiq_name", etabexp1),
                 ("etab_etiq_city", etabexp2),
+                
+                ("printer_param", printer_param)
                 ]
             
             if(printerName is not None and printerName != "" and labelFile is not None and labelFile != ""):
@@ -191,7 +193,7 @@ def prepareprintetiq(self, nom_table, id_table):
                 #    printer = printerName
                     
                 #ctrl_print.PrintingLabel.printetiquetteonwindows(self,printer,labelFile,'[',informations)   
-                self.env['di.printing.printing'].printetiquetteonwindows(printer,labelFile,'[',informations)
+                self.env['di.printing.printing'].printetiquetteonwindows(printer,labelFile,'[',']',langage_print,informations)
                 
                 # Update counter of barcode 128
                 if with_ean128:
@@ -217,6 +219,7 @@ def prepareprintetiqcarrier(self, nom_table, id_table):
                 pallet_printer = self.env['di.printing.printer'].search([('id', '=', _etiq_pallet_printer_id), ]) 
                 for printer in  pallet_printer:
                     printerName = printer.realname
+                    langage_print = printer.langage_print
 
             
             _etiq_pallet_model_id = self.env['ir.config_parameter'].sudo().get_param('hubi.di_etiq_pallet_model_id')
@@ -259,7 +262,7 @@ def prepareprintetiqcarrier(self, nom_table, id_table):
                     if num_pallet != line.pallet_no and num_pallet != "999":
                         # impression
                         if(printerName is not None and printerName != "" and labelFile is not None and labelFile != ""):
-                            self.env['di.printing.printing'].printetiquetteonwindows(printerName,labelFile,'[',informations)
+                            self.env['di.printing.printing'].printetiquetteonwindows(printerName,labelFile,'[',']',langage_print,informations)
                         num_pallet = ""
                         description_item = ""
                         pallet_qty = 0
@@ -296,7 +299,7 @@ def prepareprintetiqcarrier(self, nom_table, id_table):
                 if num_pallet != "" and num_pallet != "999":
                         # impression de la dernière étiquette
                         if(printerName is not None and printerName != "" and labelFile is not None and labelFile != ""):
-                            self.env['di.printing.printing'].printetiquetteonwindows(printerName,labelFile,'[',informations)
+                            self.env['di.printing.printing'].printetiquetteonwindows(printerName,labelFile,'[',']',langage_print,informations)
           
                 #title = ("Etiquette for %s") % ordername
                 #message = 'Etiquette - ' + printerName + ' OK '
